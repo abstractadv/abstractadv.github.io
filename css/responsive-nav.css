@@ -6,7 +6,7 @@
   width: 100%;
   display: block;
   list-style: none;
-  background: orange;
+  background: #222;
 }
 
 #nav li {
@@ -14,10 +14,12 @@
   display: block;
   padding: 0 1em;
   line-height: 2em;
-  border-bottom: 1px solid #fff;
 }
 #nav li a  {
 	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: black 0.1em 0.1em 0.2em
 }
 
 .js #nav {
@@ -38,8 +40,14 @@
 	text-align: right;
 	padding: 0 1em;
 	line-height: 2em;
+	text-decoration: none;
+	color: #fff;
+	
 }
 
+#nav-toggle a {
+	color: white;
+}
 
 .logo {
 	display: none;
@@ -72,6 +80,11 @@
 	display: inline-block;
 	border: none;
 }
+
+#nav li a:hover {
+	border-bottom: 1px solid #fff;
+}
+
   .logo {
 	display: inline-block;
   }
@@ -80,6 +93,10 @@
 	padding: 0 1em;
 	line-height: 2em;
 	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	text-transform: uppercase;
   }
   
   

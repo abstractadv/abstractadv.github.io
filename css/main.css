@@ -102,7 +102,7 @@ textarea {
  */
  
  html {
-	font-size: 90%;
+	font-size: 100%;
  }
  
  body {
@@ -115,14 +115,17 @@ textarea {
  * Block
  */
 header {
-	border-bottom: 1px solid #ccc;
+	background-image: url("../img/abs-bg-blur.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
 }
 
 /*
  * Element
  */
  .container {
-	max-width: 95%;
+	max-width: 1140px;
 	margin: 0 auto;
  }
  
@@ -140,6 +143,7 @@ header {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
+	padding: 5em 0;
  }
 
 /*
