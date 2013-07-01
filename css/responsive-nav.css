@@ -42,11 +42,11 @@
 	line-height: 2em;
 	text-decoration: none;
 	color: #fff;
-	
+	font-weight: 700;
+	text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 #nav-toggle a {
-	color: white;
 }
 
 .logo {
