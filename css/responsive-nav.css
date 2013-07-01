@@ -1,0 +1,86 @@
+/*! responsive-nav.js v1.0.15 by @viljamis */
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+  background: orange;
+}
+
+#nav li {
+  width: 100%;
+  display: block;
+  padding: 0 1em;
+  line-height: 2em;
+  border-bottom: 1px solid #fff;
+}
+#nav li a  {
+	text-decoration: none;
+}
+
+.js #nav {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#nav.opened {
+  max-height: 9999px;
+}
+
+#nav-toggle {
+	float: right;
+	text-align: right;
+	padding: 0 1em;
+	line-height: 2em;
+}
+
+
+.logo {
+	display: none;
+}
+
+
+@media screen and (min-width: 40em) {
+  .js #nav {
+    position: relative;
+  }
+  .js #nav.closed {
+    max-height: none;
+  }
+  #nav-toggle {
+    display: none;
+  }
+
+.logo {
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+}
+#nav ul {
+	display: inline-block;
+	background-color: transparent;
+	float: right;
+}
+#nav li {
+	width: auto;
+	display: inline-block;
+	border: none;
+}
+  .logo {
+	display: inline-block;
+  }
+  
+  .logo a {
+	padding: 0 1em;
+	line-height: 2em;
+	text-decoration: none;
+  }
+  
+  
+}
