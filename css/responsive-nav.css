@@ -105,7 +105,7 @@
      white, white 50%, orange 50%, orange );
   background-size: 100% 202%;
   transition: all 0.1s ease;
-  animation: down-bump 0.4s ease;
+
 }
 
 .box:hover {
@@ -124,16 +124,6 @@
 	color: #fff;
 }
 
-@keyframes up-bump {
-  0% { padding-top: 2em; }
-  50% { padding-top: 1.5em; }
-  100% { padding-top: 2em; }
-}
-@keyframes down-bump {
-  0% { padding-top: 2em; }
-  50% { padding-top: 2.5em; }
-  100% { padding-top: 2em; }
-}
 
 
 
