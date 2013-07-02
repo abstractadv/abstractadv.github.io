@@ -167,6 +167,13 @@ header {
 	text-align: center;
  }
  
+ .flush--all{
+	margin: 0px!important;
+ }
+ 
+ .flush--top {
+	margin-top: 0px!important;
+ }
  
  
 /*

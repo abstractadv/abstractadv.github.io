@@ -30,32 +30,7 @@
  * =======================================================================
  */
 
-@font-face {
-	font-family: "Open Sans";
-	src: local("Open Sans"), local("Helvetica Neue"), local("Helvetica"), local("Arial"), local ("sans-serif");
-	unicode-range: U+0026;
-}
 
-@font-face {
-	font-family: "Open Sans";
-	src: local("Helvetica");
-	unicode-range: U+270C;
-}
-
-
-/**
- *
- * Extend this class on any element of your
- * choice for ampersands.
- *
- * For example:
-
-	<h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
-
- */
-.ampersand {
-	font-family: Ampersand, Verdana, sans-serif;
-}
 
 
 /**
