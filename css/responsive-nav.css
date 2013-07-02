@@ -71,6 +71,7 @@
 	display: inline-block;
 	background-color: transparent;
 	float: right;
+	text-align: right;
 }
 #nav li {
 	width: auto;
@@ -91,7 +92,7 @@
 	padding: 0 1em;
 	line-height: 4em;
 	text-decoration: none;
-	color: #222;
+	color: orange;
 	font-weight: 700;
 	text-transform: uppercase;
   }
