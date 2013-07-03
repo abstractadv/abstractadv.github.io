@@ -45,21 +45,46 @@
 	top: 0;
 	left: 0;
 	padding: 20px;
-	background: #2c3f52;
+	background: orange;
 	color: #ed4e6e;
 }
 
-.grid figcaption h3 {
-
-}
-
-.grid figcaption span:before {
-	content: 'by ';
+.grid figcaption h5 {
+	color: #fff
 }
 
 .grid figcaption a {
-	
+	font-size: 85%;
+	font-style: italic;
 }
+.link {
+	text-decoration: none;
+}
+
+.link--tags {
+	font-size: 8px;
+	font-size: .8rem;
+	font-style: italick
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Effect 2: Move Up */
 .grid.effect-2 li.animate {
