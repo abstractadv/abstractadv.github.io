@@ -59,6 +59,7 @@ canvas,
 img,
 video {
     vertical-align: middle;
+    width: 100%;
 }
 
 /*
@@ -114,6 +115,7 @@ header {
 /*
  * Element
  */
+ #container,
  .container {
 	max-width: 1140px;
     width: 98%;
@@ -127,7 +129,7 @@ header {
  
  .module {
 	box-sizing: border-box;
-	padding: 0 1em;
+	padding: 0 1.6182em;
  }
  .marketing {
 	background-image: url("../img/abs-bg-blur.jpg");
@@ -173,8 +175,9 @@ header {
 	margin: 0px!important;
  }
  
- .flush--top {
-	margin-top: 0px!important;
+ .flush--bottom {
+    margin-top: 1em!important;
+	margin-bottom: .5em!important;
  }
  
  
