@@ -1,4 +1,4 @@
-/*
+﻿/*
  *
  *.||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
  *
@@ -91,7 +91,7 @@ p + .drop-cap {
  */
 
 html {
-	font: normal 100%/1.618 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; /* base font size 18px with 1.65 line-height */
+	font: normal 100%/1.618 "Droid Serif", "Helvetica Neue", Helvetica, Arial, Sans-Serif; /* base font size 18px with 1.65 line-height */
 }
 
 body {
