@@ -1,160 +1,112 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="cleartype" content="on">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:900italic|Droid+Serif:700|Roboto:300,700,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/typeplate.css">
-		<link rel="stylesheet" href="css/responsive-nav.css"> 
+        <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" href="css/screen.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <header class="clearfix">
-			<div class="logo"><a href="index.html"><img src="img/logo.png"></a></div>
-		<nav id="nav" class="main-nav">
-			<ul>
-			<li class="box"><a href="#">Home</a></li>
-			<li class="box"><a href="#">About Us</a></li>
-			<li class="box"><a href="#">Our Services</a></li>
-			<li class="box"><a href="gallery.html">Gallery</a></li>
-			<li class="box"><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-		</header>
-		
-		<section class="marketing text--center">
-			<div class="container">
-			<div class="pure-g-r">
-				<div class="pure-u-1">
-					<img class="img-r img--half" src="img/abs-market.svg">
-				</div>
-			</div>
-			</div>
-		</section>
-		
-		<section>
-			<div class="container">
-				<div class="pure-g-r">
-					<div class="pure-u-1">
-						<div class="module">
-							<h4>Our Services</h4>
-						</div>
-					</div>
-					<div class="pure-u-1-3">
-						<div class="module">
-						<img class="img-responsive" src="img/neonbox.png">
-						<h3 class="epsilon flush--bottom">Neon Box</h3>
-						<p> Pembuatan Neon Box dengan berbagai bentuk, dan bahan  </p>
-						</div>
-					</div>
-					<div class="pure-u-1-3">
-						<div class="module">
-						<img class="img-responsive" src="img/htimbul.png">
-						<h3 class="epsilon flush--bottom">Huruf Timbul</h3>
-						<p> ini hanayalah sebuah test biasa bukan siapa-siapa </p>
-						</div>
-					</div>
-					<div class="pure-u-1-3">
-						<div class="module">
-						<img class="img-responsive" src="img/runningtext.png">
-						<h3 class="epsilon flush--bottom">Running Text</h3>
-						<p> ini hanayalah sebuah test biasa bukan siapa-siapa </p>
-						</div>
-					</div>
-					<div class="pure-u-1-3">
-						<div class="module">
-						<img class="img-responsive" src="img/billboard.svg">
-						<h3 class="epsilon flush--bottom">Billboard</h3>
-						<p> ini hanayalah sebuah test biasa bukan siapa-siapa </p>
-						</div>
-					</div>
-					<div class="pure-u-1-3">
-						<div class="module">
-						<img class="img-responsive" src="img/konstruksi.svg">
-						<h3 class="epsilon flush--bottom">Konstruksi</h3>
-						<p> ini hanayalah sebuah test biasa bukan siapa-siapa </p>
-						</div>
-					</div>
-					<div class="pure-u-1-3">
-						<div class="module">
-						<img class="img-responsive" src="img/banner.svg">
-						<h3 class="epsilon flush--bottom">Banner</h3>
-						<p> ini hanayalah sebuah test biasa bukan siapa-siapa </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<section class="dark--bg">
-			<div class="container">
-				<div class="pure-g-r">
-					<div class="pure-u-1-2">
-						<div class="module">
-							
-						</div>
-					</div>
-					
-					<div class="pure-u-1-2">
-						<div class="module">
-							
-						</div>
-					</div>	
-				</div>
-			</div>
-		</section>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+        <nav role='navigation' class="main-nav" id="main-nav">
+            <a href="" class="btn" id="menu-toggle-close">X</a>
+              <ul>
+                <li><a href="#" class="btn btn--full">Home</a></li>
+                <li><a href="#" class="btn btn--full">About</a></li>
+                <li><a href="#" class="btn btn--full">Clients</a></li>
+                <li><a href="#" class="btn btn--full">Contact Us</a></li>
+              </ul>
+        </nav>  
+        <a href="" class="btn fixed-top-left" id="menu-toggle">MENU</a>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+        <div class="swiper-container viewport">
+            <div class="swiper-wrapper flipsnap">
+                <div class="item item1 swiper-slide">
+                    <div class="container">
+                        <div class="absolute-center__container">
+                            <div class="absolute-center__item">
+                                <h2 class="text-center alpha slogan">We Help You Making Better Advertising</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item2 swiper-slide">
+                    <h1>OUR PRODUCT</h1>
+                    <div class="swiper-container swiper-vertical" style="max-width: 800px; margin: 0 auto">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/thumb/neonbox.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/htimbul.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/konstruksi.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/plng.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/huruftimbul.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/office.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/plangsign.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/neonacrylic.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/depan.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/thumb/custom.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="item item3 swiper-slide">3</div>
+            
+            <div class="item item4 swiper-slide">4</div>
+          
+          </div>
+          
+        </div>
+
+<div class="bottom-nav">
+  <a href="#" class="btn"><</a>
+  <a href="#" class="btn">></a>
+</div>
+
+        <script src="js/vendor/jquery-2.0.3.min.js"></script>
+        <script src="js/helper.js"></script>
+        <script src="js/flipsnap.min.js"></script>
+        <script src="js/swiper.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        <!--<script>
+            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,"script"));
+        </script>-->
     </body>
 </html>

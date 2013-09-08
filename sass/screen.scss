@@ -1,0 +1,248 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "bourbon";
+@import "flexbox";
+
+@import "jagra-fw/reset";
+@import "jagra-fw/mixin";
+@import "jagra-fw/button";
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Droid Serif', serif;
+	color: #fdfdfd;
+	font-weight: 700;
+}
+
+.slogan {
+	font-family: 'Playfair Display', Serif;
+	font-style: italic;
+	font-weight: 900;
+	letter-spacing: -1px;
+
+	@include bp(baby-bear){
+		font-size: 2rem;
+	};
+
+	@include bp(mama-bear){
+		font-size: 3rem;
+	};
+	@include bp(papa-bear){
+		font-size: 5rem;
+	}
+}
+
+
+.dot-pattern {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGD4D8SMQAwGcAY2AbBKDBUAVuYCBQPd34sAAAAASUVORK5CYII=);
+}
+
+
+.container {
+	max-width: 1140px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+
+}
+
+.absolute-center__container {
+	display: table;
+	width: 100%;
+	height: 100%;
+
+	.absolute-center__item {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-center {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JS Behavios Style
+.viewport {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin: 0;
+   -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
+  
+  background: black;
+}
+
+.flipsnap {
+  width: 200%;
+  height: 100%;
+ 
+}
+
+.item {
+  float: left;
+  display: block;
+  height: 100%;
+  //overflow-y: auto;
+  //overflow-x: hidden;
+}
+
+.fixed-top-left {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	z-index: 9998;
+}
+
+.main-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height:100%;
+  z-index: 9999;
+  background: rgba(#000, .9);
+   visibility: visible;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+  -webkit-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  -moz-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  -ms-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  -o-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+}
+
+html.no-touch {
+	.bottom-nav {
+	  position: absolute;
+	  display: block;
+	  right: 0;
+	  bottom: 0;
+	  width: 100%;
+	  text-align: right;
+	  background: linear-gradient(transparent, #000);
+	  z-index: 9999;
+	}
+}
+
+html.touch {
+	.bottom-nav {display: none;}
+}
+
+
+.slide-left-in {
+  width: 200px;
+  height:100%;
+  display: block;
+  opacity: 1;
+  margin-left:0;
+  visibility: visible;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  -moz-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  -ms-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  -o-transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+  transition: all 0.5s cubic-bezier(.10, .70, .10, 1);
+}
+
+.slide-left-out {
+  width: 0;
+  margin-left: -20%;
+  height:100%;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 1s cubic-bezier(.10, .70, .10, 1);
+  -moz-transition: all 1s cubic-bezier(.10, .70, .10, 1);
+  -ms-transition: all 1s cubic-bezier(.10, .70, .10, 1);
+  -o-transition: all 1s cubic-bezier(.10, .70, .10, 1);
+  transition: all 1s cubic-bezier(.10, .70, .10, 1);
+}
+
+
+
+.item1 {
+	position: relative;
+	 &:before {
+	 	@extend .dot-pattern;
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background-repeat: repeat;
+	  z-index: -1;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../img/bg/dpn-bw.jpg) top center no-repeat;
+	 	-webkit-background-size: cover;
+	  	background-size: cover;
+	  	background-attachment: clip;
+	  	z-index: -2;
+	}
+}
+.item2 {
+  background: url(../img/bg/cat2.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.item3 { 
+	background: url(../img/bg/cat3.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.item4 { 
+	background: url(../img/bg/cat4.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}

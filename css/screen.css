@@ -1,0 +1,391 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* ==========================================================================
+   Base (https://github.com/suitcss/base) + modifed
+   ========================================================================== */
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+/*
+ * 1. Reset typography, will add manualy. see _typo.scss
+ */
+/* line 25, ../sass/jagra-fw/_reset.scss */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0;
+  padding: 0;
+  /* 1 */
+  line-height: 1;
+  /* 1 */
+}
+
+/* line 31, ../sass/jagra-fw/_reset.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 37, ../sass/jagra-fw/_reset.scss */
+iframe {
+  border: 0;
+}
+
+/* line 42, ../sass/jagra-fw/_reset.scss */
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+/* line 54, ../sass/jagra-fw/_reset.scss */
+[tabindex="-1"] {
+  outline: none;
+}
+
+/**
+ * Remove margin-bottom on hgroup or module last-child
+ */
+/* line 65, ../sass/jagra-fw/_reset.scss */
+hgroup *:last-child,
+.module *:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Buttons (https://github.com/suitcss/button) + modifed
+   ========================================================================== */
+/**
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ *
+ * Recommended use:
+ *
+ * <a class="Button [btn--modifier]" role="button" href="[url]">Button text</a>
+ * <button class="Button [btn--modifier]" type="submit">Button text</button>
+ * <input class="Button [btn--modifier]" type="submit" value="Button text">
+ */
+/**
+ * Button template
+ *
+ * Build on this component using rulesets in your application-level CSS.
+ *
+ * 1. Corrects inability to style clickable `input` types in iOS
+ * 2. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 3. Inherit text color from ancestor.
+ * 4. Inherit font styles from ancestor.
+ * 5. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
+ * 6. Prevent button text from being selectable.
+ * 7. Prevent wrapping across multiple lines.
+ */
+/* line 32, ../sass/jagra-fw/_button.scss */
+.btn {
+  -webkit-appearance: none;
+  /* 1 */
+  background: transparent;
+  border: 1px solid;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 2 */
+  color: inherit;
+  /* 3 */
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  /* 4 */
+  line-height: normal;
+  /* 5 */
+  margin: 0;
+  padding: 0.4em 0.75em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* 6 */
+  vertical-align: middle;
+  white-space: nowrap;
+  /* 7 */
+}
+
+/*
+ * make button slightly larger on touch device, require modernizer touch detection
+ */
+/* line 62, ../sass/jagra-fw/_button.scss */
+html.touch .btn {
+  padding: 1em .75em;
+}
+
+/**
+ * UI states
+ */
+/* line 72, ../sass/jagra-fw/_button.scss */
+.btn:hover,
+.btn:focus,
+.btn:active {
+  text-decoration: none;
+}
+
+/* line 77, ../sass/jagra-fw/_button.scss */
+.btn:disabled,
+.btn.is-disabled {
+  cursor: default;
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+/* line 85, ../sass/jagra-fw/_button.scss */
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/**
+ * Modifier: full-width buttons
+ */
+/* line 96, ../sass/jagra-fw/_button.scss */
+.btn--full {
+  display: block;
+  width: 100%;
+}
+
+/* line 14, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Droid Serif', serif;
+  color: #fdfdfd;
+  font-weight: 700;
+}
+
+/* line 20, ../sass/screen.scss */
+.slogan {
+  font-family: 'Playfair Display', Serif;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+@media only screen and (max-width: 30em) {
+  /* line 20, ../sass/screen.scss */
+  .slogan {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 60em) {
+  /* line 20, ../sass/screen.scss */
+  .slogan {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 20, ../sass/screen.scss */
+  .slogan {
+    font-size: 5rem;
+  }
+}
+
+/* line 39, ../sass/screen.scss */
+.dot-pattern, .item1:before {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGD4D8SMQAwGcAY2AbBKDBUAVuYCBQPd34sAAAAASUVORK5CYII=);
+}
+
+/* line 44, ../sass/screen.scss */
+.container {
+  max-width: 1140px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 52, ../sass/screen.scss */
+.absolute-center__container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+/* line 57, ../sass/screen.scss */
+.absolute-center__container .absolute-center__item {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 75, ../sass/screen.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 105, ../sass/screen.scss */
+.viewport {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin: 0;
+  -webkit-transform: translateZ(0);
+  /* Optional: When heavy at iOS6+ */
+  background: black;
+}
+
+/* line 120, ../sass/screen.scss */
+.flipsnap {
+  width: 200%;
+  height: 100%;
+}
+
+/* line 126, ../sass/screen.scss */
+.item {
+  float: left;
+  display: block;
+  height: 100%;
+}
+
+/* line 134, ../sass/screen.scss */
+.fixed-top-left {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  z-index: 9998;
+}
+
+/* line 141, ../sass/screen.scss */
+.main-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.9);
+  visibility: visible;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -ms-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -o-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+/* line 160, ../sass/screen.scss */
+html.no-touch .bottom-nav {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  background: linear, false, transparent, black;
+  z-index: 9999;
+}
+
+/* line 173, ../sass/screen.scss */
+html.touch .bottom-nav {
+  display: none;
+}
+
+/* line 177, ../sass/screen.scss */
+.slide-left-in {
+  width: 200px;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  margin-left: 0;
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -ms-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -o-transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+/* line 193, ../sass/screen.scss */
+.slide-left-out {
+  width: 0;
+  margin-left: -20%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 1s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -moz-transition: all 1s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -ms-transition: all 1s cubic-bezier(0.1, 0.7, 0.1, 1);
+  -o-transition: all 1s cubic-bezier(0.1, 0.7, 0.1, 1);
+  transition: all 1s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+/* line 208, ../sass/screen.scss */
+.item1 {
+  position: relative;
+}
+/* line 210, ../sass/screen.scss */
+.item1:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  z-index: -1;
+}
+/* line 220, ../sass/screen.scss */
+.item1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg/dpn-bw.jpg) top center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: clip;
+  z-index: -2;
+}
+
+/* line 234, ../sass/screen.scss */
+.item2 {
+  background: url(../img/bg/cat2.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* line 239, ../sass/screen.scss */
+.item3 {
+  background: url(../img/bg/cat3.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* line 244, ../sass/screen.scss */
+.item4 {
+  background: url(../img/bg/cat4.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
