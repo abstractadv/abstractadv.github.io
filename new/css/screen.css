@@ -71,6 +71,98 @@ hgroup *:last-child,
   margin-bottom: 0;
 }
 
+/**
+ * Typography
+ */
+/* line 5, ../sass/jagra-fw/_typo.scss */
+html {
+  font-size: 87.5%;
+  line-height: 1.3;
+}
+
+/* line 10, ../sass/jagra-fw/_typo.scss */
+body {
+  font-family: "Roboto", "Segoe WP", "Segoe UI", "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, Sans-serif;
+  font-weight: 300;
+}
+
+/* line 15, ../sass/jagra-fw/_typo.scss */
+h1, h2, h3, h4, h5, h6, q {
+  font-family: "Hofler Text", "Droid Serif", georgia, serif;
+  color: inherit;
+  font-weight: 400;
+}
+
+/* line 21, ../sass/jagra-fw/_typo.scss */
+p {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+/* line 26, ../sass/jagra-fw/_typo.scss */
+q {
+  font-style: italic;
+}
+
+/* ==========================================================================
+    $ Navigation
+   ========================================================================== */
+/**
+ * Remove underline link on nav container
+ */
+/* line 10, ../sass/jagra-fw/_nav.scss */
+nav a {
+  text-decoration: none;
+}
+
+/**
+ * Navigation Block;
+ */
+/* line 20, ../sass/jagra-fw/_nav.scss */
+.side-bar--right {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  box-shadow: inset 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 43, ../sass/jagra-fw/_nav.scss */
+.nav--block {
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+}
+/* line 48, ../sass/jagra-fw/_nav.scss */
+.nav--block a {
+  /* Old browser */
+  padding-left: 16;
+  /* Modern Browser */
+  padding-left: 1rem;
+  /* Old browser */
+  padding-right: 16;
+  /* Modern Browser */
+  padding-right: 1rem;
+  /* Old browser */
+  height: 48;
+  /* Modern Browser */
+  height: 3rem;
+  display: block;
+  width: 100%;
+  line-height: 3rem;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 63, ../sass/jagra-fw/_nav.scss */
+.nav--block a:hover, .nav--block a:focus {
+  background: red;
+}
+
 /* ==========================================================================
    Buttons (https://github.com/suitcss/button) + modifed
    ========================================================================== */
@@ -104,6 +196,7 @@ hgroup *:last-child,
   -webkit-appearance: none;
   /* 1 */
   background: transparent;
+  border: 1px solid;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 2 */
@@ -133,11 +226,6 @@ hgroup *:last-child,
 /*
  * make button slightly larger on touch device, require modernizer touch detection
  */
-/* line 62, ../sass/jagra-fw/_button.scss */
-html.touch .btn {
-  padding: 1.3em 0.75em;
-}
-
 /**
  * UI states
  */
@@ -176,6 +264,27 @@ html.touch .btn {
 /* line 101, ../sass/jagra-fw/_button.scss */
 .btn--call {
   background: red;
+}
+
+/* line 106, ../sass/jagra-fw/_button.scss */
+.btn--toggleNav {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  border: 1px solid #fff;
+  padding: 0 !important;
+  margin: 0 !important;
+  /* Old browser */
+  height: 48;
+  /* Modern Browser */
+  height: 3rem;
+  /* Old browser */
+  width: 48;
+  /* Modern Browser */
+  width: 3rem;
+  text-indent: -9999px;
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 8px;
 }
 
 /**
@@ -218,13 +327,15 @@ html.touch .btn {
 /* line 36, ../sass/jagra-fw/_position.scss */
 .absolute-center__container {
   display: table;
+  vertical-align: middle;
   width: 100%;
-  height: 100%;
 }
 /* line 41, ../sass/jagra-fw/_position.scss */
 .absolute-center__container .absolute-center__item {
   display: table-cell;
   vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -383,42 +494,11 @@ html.touch .btn {
   width: 65%;
 }
 
-/* line 18, ../sass/screen.scss */
-html {
-  font-size: 87.5%;
-  line-height: 1.3;
-}
-
-/* line 25, ../sass/screen.scss */
-h1, h2, h3, h4, h5, h6, q {
-  font-family: "Hofler Text", "Droid Serif", georgia, serif;
-  color: #f39c12;
-  font-weight: 400;
-}
-
-/* line 31, ../sass/screen.scss */
-p {
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-}
-
-/* line 36, ../sass/screen.scss */
-q {
-  font-style: italic;
-}
-
 /**
  * add padding on section
  */
-/* line 46, ../sass/screen.scss */
-body {
-  border-top: 3px solid #f39c12;
-  font-family: "Roboto", "Segoe WP", "Segoe UI", "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, Sans-serif;
-  font-weight: 300;
-}
-
-/* line 52, ../sass/screen.scss */
-section {
+/* line 31, ../sass/screen.scss */
+.container {
   max-width: 1140px;
   width: 90%;
   margin: 18px auto;
@@ -427,12 +507,12 @@ section {
   padding: 1.5rem 0;
   /* Reset last element margin inside section to 0 */
 }
-/* line 62, ../sass/screen.scss */
-section > *:last-child {
+/* line 41, ../sass/screen.scss */
+.container > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 blockquote {
   margin: 16px 0;
   margin: 1rem 0;
@@ -445,17 +525,17 @@ blockquote {
 /**
  * Conditional CSS
  */
-/* line 81, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 html.no-js .offcanvas-right {
   display: block;
   position: static;
 }
-/* line 86, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 html.no-js .toggle--nav {
   display: none;
   visibility: hidden;
 }
-/* line 92, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 html.no-js .main-nav {
   position: static;
   font-size: 14px;
@@ -465,7 +545,7 @@ html.no-js .main-nav {
   height: auto;
   margin: 0 auto;
 }
-/* line 101, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 html.no-js .main-nav > a {
   display: table-cell;
   vertical-align: middle;
@@ -476,12 +556,12 @@ html.no-js .main-nav > a {
   color: #fcfcfc;
   text-align: center;
 }
-/* line 111, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 html.no-js .main-nav > a:hover {
   color: #fcfcfc;
   background: #f39c12;
 }
-/* line 119, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 html.no-js #homeTopNav__btn {
   background-color: transparent;
   background-image: url(icon/home.png);
@@ -497,7 +577,7 @@ html.no-js #homeTopNav__btn {
   color: black;
   text-indent: -9999px;
 }
-/* line 134, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 html.no-js #homeTopNav__btn:hover {
   color: #fcfcfc;
   background-color: #f39c12;
@@ -506,7 +586,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Off Canvas 
  */
-/* line 146, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .offcanvas-right {
   display: block;
   background: #666;
@@ -542,7 +622,7 @@ html.no-js #homeTopNav__btn:hover {
   transition: all 0.5s ease;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .offcanvas-right-show {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -567,7 +647,7 @@ html.no-js #homeTopNav__btn:hover {
   transition: all 0.5s ease;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .toRight {
   -webkit-transform: translateX(-200px);
   -moz-transform: translateX(-200px);
@@ -588,17 +668,12 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Main Navigation 
  */
-/* line 240, ../sass/screen.scss */
-.main-nav {
-  /* Remove underline text on main-navigation */
-}
-/* line 242, ../sass/screen.scss */
-.main-nav a {
-  text-decoration: none;
-  display: block;
+/* line 221, ../sass/screen.scss */
+.main-content {
+  z-index: 5;
 }
 
-/* line 255, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 #toggleNav {
   position: fixed;
   top: 0;
@@ -608,7 +683,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Styling Hero Unit
  */
-/* line 266, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 #hero {
   width: 100% !important;
   background: url(../img/bg/dpn-bw-s.jpg);
@@ -619,33 +694,43 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Extra large Text for Hero Page
  */
-/* line 277, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .slogan {
   text-transform: capitalize;
   font-style: italic;
   font-weight: bold;
   font-weight: 900;
   color: #f39c12;
+  letter-spacing: -1px;
 }
 @media only screen and (max-width: 30em) {
-  /* line 277, ../sass/screen.scss */
+  /* line 249, ../sass/screen.scss */
   .slogan {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
+@media only screen and (min-width: 90em) {
+  /* line 249, ../sass/screen.scss */
+  .slogan {
+    /* Old browser */
+    font-size: 58;
+    /* Modern Browser */
+    font-size: 3.625rem;
+  }
+}
 
-/* line 295, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .horizontal-scroll {
   width: 100%;
   overflow-x: auto;
 }
 
-/* line 300, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 .list-horizontal {
   width: 500%;
 }
-/* line 303, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 .list-horizontal > li {
   display: inline;
   float: left;
@@ -654,43 +739,53 @@ html.no-js #homeTopNav__btn:hover {
 /**
 * Typography Helper
 */
-/* line 322, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .text--left {
   text-align: left !important;
 }
 
-/* line 323, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 .text--right {
   text-align: right !important;
 }
 
-/* line 324, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .text--center {
   text-align: center !important;
 }
 
-/* line 326, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .text--white {
   color: #fcfcfc !important;
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 .text--orange {
   color: #f39c12 !important;
+}
+
+/* line 306, ../sass/screen.scss */
+.text--shadow {
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /**
  * Background Helper
  */
-/* line 334, ../sass/screen.scss */
-.bg-orange {
-  background-color: #f39c12 !important;
+/* line 310, ../sass/screen.scss */
+.bg--white {
+  background-color: #fcfcfc !important;
+}
+
+/* line 311, ../sass/screen.scss */
+.bg--orange {
+  background-color: orange !important;
 }
 
 /**
 * layout Helper
 */
-/* line 340, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .full-page {
   width: 100%;
   height: 250px;
@@ -699,30 +794,35 @@ html.no-js #homeTopNav__btn:hover {
   padding: 0 !important;
 }
 
-/* line 348, ../sass/screen.scss */
+/* line 325, ../sass/screen.scss */
 .full-width {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-/* line 353, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .side--pad {
   padding-left: 5% !important;
   padding-right: 5% !important;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 332, ../sass/screen.scss */
 .flush {
   margin: 0px !important;
   padding: 0px !important;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
+.flush-top {
+  margin-top: 0px !important;
+}
+
+/* line 334, ../sass/screen.scss */
 .flush-bottom {
   margin-bottom: 0px !important;
 }
 
-/* line 357, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 .two-third {
   width: 66.666%;
 }
