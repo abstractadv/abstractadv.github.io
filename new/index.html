@@ -32,82 +32,144 @@
         <!--
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
-        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:900italic|Droid+Serif:700|Roboto:300,700,300italic' rel='stylesheet' type='text/css'>
+        <!-- <link href='http://fonts.googleapis.com/css?family=Playfair+Display:900italic|Droid+Serif:700|Roboto:300,700,300italic' rel='stylesheet' type='text/css'> -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/screen.css">
+        <link rel="stylesheet" href="css/sprites-16.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-
-        <nav role='navigation' class="main-nav" id="main-nav">
-            <a href="" class="btn" id="menu-toggle-close">X</a>
-              <ul>
-                <li><a href="#" class="btn btn--full">Home</a></li>
-                <li><a href="#" class="btn btn--full">About</a></li>
-                <li><a href="#" class="btn btn--full">Clients</a></li>
-                <li><a href="#" class="btn btn--full">Contact Us</a></li>
-              </ul>
-        </nav>  
-        <a href="" class="btn fixed-top-left" id="menu-toggle">MENU</a>
-
-        <div class="viewport">
-            <div class="flipsnap">
-                <div class="item item1">
-                    <div class="container">
-                        <div class="absolute-center__container">
-                            <div class="absolute-center__item">
-                                <h2 class="text-center alpha slogan">We Help You Making Better Advertising</h2>
-                            </div>
-                        </div>
-                    </div>
+        <aside role="navigation" class="">
+            <a href="" class="btn toggle--nav">Menu</a>
+            <nav class="main-nav">
+                <a href="index.html" id="homeTopNav__btn">Home</a>
+                <a href="">About</a>
+                <a href="">Product</a>
+                <a href="">Gallery</a>
+                <a href="">Contact</a>
+            </nav>
+        </aside>
+        
+        <section class="flush" id="hero">
+            <div class="absolute-center__container">
+                <div class="absolute-center__item full-page text--center">
+                    <h2 class="slogan text--white">We Help you Making better advertising</h2>
+                    <a href="#about" class="down-arrow">Learn More</a>
                 </div>
+            </div>
+        </section>
 
-                <div class="item item-about">
-                    <div class="container">
-                        <div class="absolute-center__container">
-                            <div class="absolute-center__item">
-                                <h2 class="alpha slogan">Since 2004, we providing one stop advertising solution</h2>
-                                <p>Sejak tahun 2004, kami telah memberikan jasa untuk membantu pembuatan media telah berada Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, a eaque quisquam eius nemo dolores quia doloremque iste laboriosam velit. Quidem, facere, aperiam dicta praesentium sequi nostrum eum ullam saepe! </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section id="about">
+            <blockquote class="">
+                <q class="slogan">Since 2004, we provide one stop advertising solution</q>
+            </blockquote>
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, impedit corrupti beatae aspernatur pariatur. Obcaecati, modi, quisquam, similique, ullam maiores praesentium adipisci vero dicta est provident veniam nisi sed quibusdam?</p>
 
-                <div class="item item2">
-                    <div id="timeline" data-columns>
-                        <img src="img/thumb/neonbox.jpg" alt="">
-                        <img src="img/thumb/htimbul.jpg" alt="">
-                        <img src="img/thumb/konstruksi.jpg" alt="">
-                        <img src="img/thumb/plng.jpg" alt="">
-                        <img src="img/thumb/huruftimbul.jpg" alt="">
-                        <img src="img/thumb/office.jpg" alt="">
-                        <img src="img/thumb/plangsign.jpg" alt="">
-                        <img src="img/thumb/neonacrylic.jpg" alt="">
-                        <img src="img/thumb/depan.jpg" alt="">
-                        <img src="img/thumb/custom.jpg" alt="">
-                    </div>
-                </div>
+            <h2>How We Work</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, eveniet, id, quaerat quae voluptates consequatur provident saepe rerum temporibus aspernatur tenetur cumque debitis accusamus fugiat enim dolorem quisquam reiciendis quod.</p>
+        </section>
+
+        <section class="full-width bg-orange text--white">
+            <h2 class="text--white side--pad">Our Services</h2>
+            <p class="side--pad">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, error harum eligendi voluptate veritatis sunt quaerat non totam cupiditate recusandae. Voluptates qui tempora quos dignissimos nesciunt et inventore natus exercitationem.</p>
+            <ul class="grid">
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#neonbox" class="" style=""><i class="icon icon-neonbox"></i>Neonbox</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#huruftimbul" class="" style=""><i class="icon icon-huruftimbul"></i>Huruf Timbul</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-billboard"></i>Billboard</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-plangtoko"></i>Plang Toko</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-banner"></i>Aneka Banner</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-neonsign"></i>Neon Sign</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-runningtext"></i>Running Text</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-booth"></i>Promotion Booth</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-icon1344"></i>Konstruksi</a>
+                </li>
+                <li class="grid-cell one-half">
+                    <a href="gallery.html/#" class="" style=""><i class="icon icon-custommade"></i>On Demand Order</a>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="full-width" id="gallery">
+            <h2 class="">Our Gallery</h2>
+            <div class="horizontal-scroll">
+                <ul class="list list-nostyle list-horizontal">
+                    <li><a href="" class="tap"><img src="img/thumb/billboard.jpg" class=""alt=""></a></li>
+                    <li><a href="" class="tap"><img src="img/thumb/billboard.jpg" class=""alt=""></a></li>
+                    <li><a href="" class="tap"><img src="img/thumb/billboard.jpg" class=""alt=""></a></li>
+                    <li><a href="" class="tap"><img src="img/thumb/billboard.jpg" class=""alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section itemscope itemtype="http://schema.org/LocalBusiness" class="h-card full-width bg-orange text--white " id="contact">
+            <h3 class="text--white side--pad" itemprop="name">Abstract Advertising</h3>
+                <ul class="grid">
+                    <li class="grid-cell side--pad">
+                        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">Jl. Raya A.H Nasution No.38 (Komp. Cucian Zipur) Ujungberung</span> <br>
+                        <span itemprop="addressLocality">Bandung</span><br>
+                        </span>
+                    </li>
+                <span itemprop="telephone">
+                    <li class="grid-cell one-half">
+                        <a href="tel:+6222-75183669" class="btn btn--full"><i class="icon-phone"></i>(022) 75183669</a>
+                    </li>
+                    <li class="grid-cell one-half">
+                        <a href="tel:+62227833809" class="btn btn--full"><i class="icon-phone"></i>(022) 7833809 </a>
+                    </li>
+                </span>
+                    
+                    <li class="grid-cell one-half">
+                        <span itemprop="url"><a href="http://www.abstract-adv.com" class="btn btn--full">www.abstract-adv.com</a></span>
+                    </li>
+
+                    <li class="grid-cell one-half">
+                        <a href="mailto:adv.abstract@gmail.com" class="btn btn--full"> <meta itemprop="email" content="adv.abstract@gmail.com">adv.abstract@gmail.com</a>
+                    </li>
+
+                </ul>
+                    
             
-            <div class="item item3">3</div>
-            
-            <div class="item item4">4</div>
-          
-          </div>
-          
-        </div>
-
-<div class="bottom-nav">
-  <a href="#" class="btn"><</a>
-  <a href="#" class="btn">></a>
-</div>
-
-        <script src="js/vendor/jquery-2.0.3.min.js"></script>
+        </section>
+        
         <script src="js/helper.js"></script>
-        <script src="js/flipsnap.min.js"></script>
-        <script src="js/quo.js"></script>
-        <script src="js/salvattore.min.js"></script>
-        <script src="js/main.js"></script>
+        <script>
+            MBP.scaleFix();
+            MBP.hideUrlBarOnLoad();
+            MBP.enableActive();
+            MBP.preventZoom();
+        </script>
+
+
+            
+        <script>
+            // Prevent Default
+
+            function stopDefaultAction() {
+                var = 
+            } 
+
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>

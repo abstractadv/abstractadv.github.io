@@ -10,6 +10,7 @@
 @import "jagra-fw/mixin";
 @import "jagra-fw/button";
 @import "jagra-fw/position";
+@import "jagra-fw/grid";
 
 
 $orange :#f39c12;
@@ -73,7 +74,6 @@ blockquote {
 }
 
 
-
 /**
  * Conditional CSS
  */
@@ -91,6 +91,7 @@ html.no-js {
 		background: #222;
 		display: table;
 		width: 100%;
+		height: auto;
 		margin: 0 auto;
 	
 		& > a {
@@ -137,15 +138,20 @@ html.no-js {
 /**
  * Main Navigation 
  */
-
 .main-nav {
-	
+	position: fixed;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height:100%;
 
 	/* Remove underline text on main-navigation */
 	a {
 		text-decoration: none;
 	}
 }
+
  
 /**
  * Styling Hero Unit
