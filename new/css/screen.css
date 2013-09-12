@@ -1,0 +1,466 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* ==========================================================================
+   Base (https://github.com/suitcss/base) + modifed
+   ========================================================================== */
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+/*
+ * 1. Reset typography, will add manualy. see _typo.scss
+ */
+/* line 25, ../sass/jagra-fw/_reset.scss */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0;
+  padding: 0;
+  /* 1 */
+  line-height: 1;
+  /* 1 */
+}
+
+/* line 31, ../sass/jagra-fw/_reset.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 37, ../sass/jagra-fw/_reset.scss */
+iframe {
+  border: 0;
+}
+
+/* line 42, ../sass/jagra-fw/_reset.scss */
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+/* line 54, ../sass/jagra-fw/_reset.scss */
+[tabindex="-1"] {
+  outline: none;
+}
+
+/**
+ * Remove margin-bottom on hgroup or module last-child
+ */
+/* line 65, ../sass/jagra-fw/_reset.scss */
+hgroup *:last-child,
+.module *:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Buttons (https://github.com/suitcss/button) + modifed
+   ========================================================================== */
+/**
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ *
+ * Recommended use:
+ *
+ * <a class="Button [btn--modifier]" role="button" href="[url]">Button text</a>
+ * <button class="Button [btn--modifier]" type="submit">Button text</button>
+ * <input class="Button [btn--modifier]" type="submit" value="Button text">
+ */
+/**
+ * Button template
+ *
+ * Build on this component using rulesets in your application-level CSS.
+ *
+ * 1. Corrects inability to style clickable `input` types in iOS
+ * 2. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 3. Inherit text color from ancestor.
+ * 4. Inherit font styles from ancestor.
+ * 5. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
+ * 6. Prevent button text from being selectable.
+ * 7. Prevent wrapping across multiple lines.
+ */
+/* line 32, ../sass/jagra-fw/_button.scss */
+.btn {
+  -webkit-appearance: none;
+  /* 1 */
+  background: transparent;
+  border: 1px solid;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 2 */
+  color: inherit;
+  /* 3 */
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  /* 4 */
+  line-height: normal;
+  /* 5 */
+  margin: 0;
+  padding: 0.4em 0.75em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* 6 */
+  vertical-align: middle;
+  white-space: nowrap;
+  /* 7 */
+}
+
+/*
+ * make button slightly larger on touch device, require modernizer touch detection
+ */
+/* line 62, ../sass/jagra-fw/_button.scss */
+html.touch .btn {
+  padding: 1em .75em;
+}
+
+/**
+ * UI states
+ */
+/* line 72, ../sass/jagra-fw/_button.scss */
+.btn:hover,
+.btn:focus,
+.btn:active {
+  text-decoration: none;
+}
+
+/* line 77, ../sass/jagra-fw/_button.scss */
+.btn:disabled,
+.btn.is-disabled {
+  cursor: default;
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+/* line 85, ../sass/jagra-fw/_button.scss */
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/**
+ * Modifier: full-width buttons
+ */
+/* line 96, ../sass/jagra-fw/_button.scss */
+.btn--full {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Absolute Center with inlin-block
+ * 
+ * Absolute Center vertical and Horizontal using inline-block
+ * Must Use height on pixel (absCenter__container)
+ */
+/**
+ * 
+ */
+/* line 13, ../sass/jagra-fw/_position.scss */
+.absCenter__container {
+  text-align: center;
+  /* [1] */
+  margin: 0;
+}
+/* line 16, ../sass/jagra-fw/_position.scss */
+.absCenter__container:before {
+  content: "";
+  display: inline-block;
+  /* [] */
+  height: 100%;
+  /* [] */
+  vertical-align: middle;
+  margin-right: -.25em;
+}
+
+/* line 25, ../sass/jagra-fw/_position.scss */
+.absCenter__item {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 30em;
+  padding: 1em;
+}
+
+/**
+ * Absolute Center with Table cell technique
+ */
+/* line 36, ../sass/jagra-fw/_position.scss */
+.absolute-center__container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+/* line 41, ../sass/jagra-fw/_position.scss */
+.absolute-center__container .absolute-center__item {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 17, ../sass/screen.scss */
+html {
+  font-size: 87.5%;
+  line-height: 1.3;
+}
+
+/* line 24, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6, q {
+  font-family: "Hofler Text", "Droid Serif", georgia, serif;
+  color: #f39c12;
+  font-weight: 400;
+}
+
+/* line 30, ../sass/screen.scss */
+p {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+/* line 35, ../sass/screen.scss */
+q {
+  font-style: italic;
+}
+
+/**
+ * add padding on section
+ */
+/* line 45, ../sass/screen.scss */
+body {
+  border-top: 3px solid #f39c12;
+  font-family: "Roboto", "Segoe WP", "Segoe UI", "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, Sans-serif;
+  font-weight: 300;
+}
+
+/* line 51, ../sass/screen.scss */
+section {
+  max-width: 1140px;
+  width: 90%;
+  margin: 18px auto;
+  margin: 1.5rem auto;
+  padding: 18px 0;
+  padding: 1.5rem 0;
+  /* Reset last element margin inside section to 0 */
+}
+/* line 61, ../sass/screen.scss */
+section > *:last-child {
+  margin-bottom: 0;
+}
+
+/* line 66, ../sass/screen.scss */
+blockquote {
+  margin: 16px 0;
+  margin: 1rem 0;
+  padding: 16px;
+  padding: 1rem;
+  border-top: 2px solid #f39c12;
+  border-bottom: 1px solid #f39c12;
+}
+
+/**
+ * Conditional CSS
+ */
+/* line 83, ../sass/screen.scss */
+html.no-js .toggle--nav {
+  display: none;
+  visibility: hidden;
+}
+/* line 89, ../sass/screen.scss */
+html.no-js .main-nav {
+  font-size: 14px;
+  background: #222;
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 96, ../sass/screen.scss */
+html.no-js .main-nav > a {
+  display: table-cell;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+  line-height: 1;
+  padding: 8px 4px;
+  color: #fcfcfc;
+  text-align: center;
+}
+/* line 106, ../sass/screen.scss */
+html.no-js .main-nav > a:hover {
+  color: #fcfcfc;
+  background: #f39c12;
+}
+/* line 114, ../sass/screen.scss */
+html.no-js #homeTopNav__btn {
+  background-color: transparent;
+  background-image: url(icon/home.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+  color: black;
+  text-indent: -9999px;
+}
+/* line 129, ../sass/screen.scss */
+html.no-js #homeTopNav__btn:hover {
+  color: #fcfcfc;
+  background-color: #f39c12;
+}
+
+/**
+ * Main Navigation 
+ */
+/* line 141, ../sass/screen.scss */
+.main-nav {
+  /* Remove underline text on main-navigation */
+}
+/* line 145, ../sass/screen.scss */
+.main-nav a {
+  text-decoration: none;
+}
+
+/**
+ * Styling Hero Unit
+ */
+/* line 155, ../sass/screen.scss */
+#hero {
+  width: 100% !important;
+  background: url(../img/bg/dpn-bw-s.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/**
+ * Extra large Text for Hero Page
+ */
+/* line 166, ../sass/screen.scss */
+.slogan {
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: bold;
+  font-weight: 900;
+  color: #f39c12;
+}
+@media only screen and (max-width: 30em) {
+  /* line 166, ../sass/screen.scss */
+  .slogan {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+
+/* line 184, ../sass/screen.scss */
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* line 189, ../sass/screen.scss */
+.list-horizontal {
+  width: 500%;
+}
+/* line 192, ../sass/screen.scss */
+.list-horizontal > li {
+  display: inline;
+  float: left;
+}
+
+/**
+* Typography Helper
+*/
+/* line 211, ../sass/screen.scss */
+.text--left {
+  text-align: left !important;
+}
+
+/* line 212, ../sass/screen.scss */
+.text--right {
+  text-align: right !important;
+}
+
+/* line 213, ../sass/screen.scss */
+.text--center {
+  text-align: center !important;
+}
+
+/* line 215, ../sass/screen.scss */
+.text--white {
+  color: #fcfcfc !important;
+}
+
+/* line 216, ../sass/screen.scss */
+.text--orange {
+  color: #f39c12 !important;
+}
+
+/**
+ * Background Helper
+ */
+/* line 223, ../sass/screen.scss */
+.bg-orange {
+  background-color: #f39c12 !important;
+}
+
+/**
+* layout Helper
+*/
+/* line 229, ../sass/screen.scss */
+.full-page {
+  width: 100%;
+  height: 250px;
+  height: 95vh;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 237, ../sass/screen.scss */
+.full-width {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* line 242, ../sass/screen.scss */
+.side--pad {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+/* line 244, ../sass/screen.scss */
+.flush {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+/* line 246, ../sass/screen.scss */
+.two-third {
+  width: 66.666%;
+}
