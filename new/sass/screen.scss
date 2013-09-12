@@ -78,7 +78,10 @@ blockquote {
  * Conditional CSS
  */
 html.no-js {
-	
+	.offcanvas-right {
+		display: block;
+		position: static;
+	}
 	// hide toggle navigation
 	.toggle--nav {
 		display: none;
@@ -87,6 +90,7 @@ html.no-js {
 
 	// make top navigation inline on html class= no-js
 	.main-nav {
+		position: static;
 		font-size: 14px;
 		background: #222;
 		display: table;
@@ -136,23 +140,124 @@ html.no-js {
 
 
 /**
- * Main Navigation 
+ * Off Canvas 
  */
-.main-nav {
+
+.offcanvas-right {
+	display: block;
+	background: #666;
 	position: fixed;
 	display: block;
 	top: 0;
 	right: 0;
 	width: 200px;
 	height:100%;
+	z-index: 2;
 
+
+  -webkit-box-shadow: inset 5px 0px 5px rgba(#000, .5);
+          box-shadow: inset 5px 0px 5px rgba(#000, .5);
+
+
+// for non browser not Support GPU Accelaration
+  -webkit-transform: translateX(200px); 
+     -moz-transform: translateX(200px); 
+      -ms-transform: translateX(200px); 
+       -o-transform: translateX(200px); 
+          transform: translateX(200px);
+  // Smooth Animation
+  -webkit-transform: translate3d(200px, 0, 0); 
+     -moz-transform: translate3d(200px, 0, 0); 
+      -ms-transform: translate3d(200px, 0, 0); 
+       -o-transform: translate3d(200px, 0, 0); 
+          transform: translate3d(200px, 0, 0);
+
+
+	-webkit-backface-visibility:hidden; /* Chrome and Safari */
+	   -moz-backface-visibility:hidden; /* Firefox */
+	    -ms-backface-visibility:hidden; /* Internet Explorer */
+	    	backface-visibility:hidden;
+
+	
+	-webkit-transition: all 0.5s ease; 
+	   -moz-transition: all 0.5s ease; 
+	     -o-transition: all 0.5s ease; 
+	        transition: all 0.5s ease; 
+
+
+}
+
+.offcanvas-right-show {
+	// for non browser not Support GPU Accelaration
+  -webkit-transform: translateX(0); 
+     -moz-transform: translateX(0); 
+      -ms-transform: translateX(0); 
+       -o-transform: translateX(0); 
+          transform: translateX(0);
+  // Smooth Animation
+  -webkit-transform: translate3d(0, 0, 0); 
+     -moz-transform: translate3d(0, 0, 0); 
+      -ms-transform: translate3d(0, 0, 0); 
+       -o-transform: translate3d(0, 0, 0); 
+          transform: translate3d(0, 0, 0);
+
+
+	-webkit-backface-visibility:visible; /* Chrome and Safari */
+	   -moz-backface-visibility:visible; /* Firefox */
+	    -ms-backface-visibility:visible; /* Internet Explorer */
+	    	backface-visibility:visible;
+
+	
+	-webkit-transition: all 0.5s ease; 
+	   -moz-transition: all 0.5s ease; 
+	     -o-transition: all 0.5s ease; 
+	        transition: all 0.5s ease; 
+}
+
+.toRight {
+	  -webkit-transform: translateX(-200px); 
+     -moz-transform: translateX(-200px); 
+      -ms-transform: translateX(-200px); 
+       -o-transform: translateX(-200px); 
+          transform: translateX(-200px);
+  // Smooth Animation
+  -webkit-transform: translate3d(-200px, 0, 0); 
+     -moz-transform: translate3d(-200px, 0, 0); 
+      -ms-transform: translate3d(-200px, 0, 0); 
+       -o-transform: translate3d(-200px, 0, 0); 
+          transform: translate3d(-200px, 0, 0);
+
+   -webkit-transition: all 0.5s ease; 
+	   -moz-transition: all 0.5s ease; 
+	     -o-transition: all 0.5s ease; 
+	        transition: all 0.5s ease; 
+}
+
+
+/**
+ * Main Navigation 
+ */
+.main-nav {
 	/* Remove underline text on main-navigation */
 	a {
 		text-decoration: none;
+		display: block;
 	}
 }
 
  
+.main {
+  	// for non browser not Support GPU Accelaration
+  
+}
+
+
+#toggleNav {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
 /**
  * Styling Hero Unit
  */
@@ -248,5 +353,5 @@ html.no-js {
 .side--pad {padding-left: 5%!important; padding-right: 5%!important}
 
 .flush {margin: 0px!important; padding: 0px!important}
-
+.flush-bottom {margin-bottom: 0px!important}
 .two-third {width: 66.666%}

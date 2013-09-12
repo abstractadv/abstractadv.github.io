@@ -40,8 +40,8 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <aside role="navigation" class="">
-            <a href="" class="btn toggle--nav">Menu</a>
+
+        <aside role="navigation" class="offcanvas-right" id="offcanvas"> 
             <nav class="main-nav">
                 <a href="index.html" id="homeTopNav__btn">Home</a>
                 <a href="">About</a>
@@ -51,6 +51,8 @@
             </nav>
         </aside>
         
+        <div class="main origin">
+        <a href="#" id="toggleNav">Menu</a>
         <section class="flush" id="hero">
             <div class="absolute-center__container">
                 <div class="absolute-center__item full-page text--center">
@@ -59,6 +61,7 @@
                 </div>
             </div>
         </section>
+        
 
         <section id="about">
             <blockquote class="">
@@ -121,7 +124,7 @@
             </div>
         </section>
 
-        <section itemscope itemtype="http://schema.org/LocalBusiness" class="h-card full-width bg-orange text--white " id="contact">
+        <section itemscope itemtype="http://schema.org/LocalBusiness" class="h-card full-width bg-orange text--white flush-bottom" id="contact">
             <h3 class="text--white side--pad" itemprop="name">Abstract Advertising</h3>
                 <ul class="grid">
                     <li class="grid-cell side--pad">
@@ -132,10 +135,10 @@
                     </li>
                 <span itemprop="telephone">
                     <li class="grid-cell one-half">
-                        <a href="tel:+6222-75183669" class="btn btn--full"><i class="icon-phone"></i>(022) 75183669</a>
+                        <a href="tel:+6222-75183669" class="btn btn--full btn--call"><i class="icon-phone"></i>(022) 75183669</a>
                     </li>
                     <li class="grid-cell one-half">
-                        <a href="tel:+62227833809" class="btn btn--full"><i class="icon-phone"></i>(022) 7833809 </a>
+                        <a href="tel:+62227833809" class="btn btn--full btn--call"><i class="icon-phone"></i>(022) 7833809 </a>
                     </li>
                 </span>
                     
@@ -148,10 +151,13 @@
                     </li>
 
                 </ul>
-                    
+        
             
         </section>
+        </div><!-- Main DIV -->
         
+
+        <script src="js/vendor/jquery-2.0.3.min.js"></script>
         <script src="js/helper.js"></script>
         <script>
             MBP.scaleFix();
@@ -160,17 +166,35 @@
             MBP.preventZoom();
         </script>
 
-
-            
         <script>
-            // Prevent Default
-
-            function stopDefaultAction() {
-                var = 
-            } 
+            $(document).ready(function(){
+                $("#toggleNav").click(function(){
+                    $("#offcanvas").toggleClass("offcanvas-right-show");
+                    $(".main").toggleClass("toRight");
+                 });
+            });
 
         </script>
 
+            
+        <script>
+           // make full window hero unit
+
+            var hero = document.getElementById("hero");
+            var full_height = window.innerHeight * 0.90 + "px";
+            hero.style.height= full_height;
+        </script>
+
+
+        <script>
+            function toggleClass(){
+                var offcanvas = document.getElementById("offcanvas");
+                var toggleNav = document.getElementById("toggleNav");
+
+
+            }
+
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
             var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];

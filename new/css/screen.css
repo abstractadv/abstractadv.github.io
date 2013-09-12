@@ -104,7 +104,6 @@ hgroup *:last-child,
   -webkit-appearance: none;
   /* 1 */
   background: transparent;
-  border: 1px solid;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 2 */
@@ -136,7 +135,7 @@ hgroup *:last-child,
  */
 /* line 62, ../sass/jagra-fw/_button.scss */
 html.touch .btn {
-  padding: 1em 0.75em;
+  padding: 1.3em 0.75em;
 }
 
 /**
@@ -172,6 +171,11 @@ html.touch .btn {
 .btn--full {
   display: block;
   width: 100%;
+}
+
+/* line 101, ../sass/jagra-fw/_button.scss */
+.btn--call {
+  background: red;
 }
 
 /**
@@ -441,13 +445,19 @@ blockquote {
 /**
  * Conditional CSS
  */
-/* line 83, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
+html.no-js .offcanvas-right {
+  display: block;
+  position: static;
+}
+/* line 86, ../sass/screen.scss */
 html.no-js .toggle--nav {
   display: none;
   visibility: hidden;
 }
-/* line 89, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 html.no-js .main-nav {
+  position: static;
   font-size: 14px;
   background: #222;
   display: table;
@@ -455,7 +465,7 @@ html.no-js .main-nav {
   height: auto;
   margin: 0 auto;
 }
-/* line 97, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 html.no-js .main-nav > a {
   display: table-cell;
   vertical-align: middle;
@@ -466,12 +476,12 @@ html.no-js .main-nav > a {
   color: #fcfcfc;
   text-align: center;
 }
-/* line 107, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 html.no-js .main-nav > a:hover {
   color: #fcfcfc;
   background: #f39c12;
 }
-/* line 115, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 html.no-js #homeTopNav__btn {
   background-color: transparent;
   background-image: url(icon/home.png);
@@ -487,34 +497,118 @@ html.no-js #homeTopNav__btn {
   color: black;
   text-indent: -9999px;
 }
-/* line 130, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 html.no-js #homeTopNav__btn:hover {
   color: #fcfcfc;
   background-color: #f39c12;
 }
 
 /**
- * Main Navigation 
+ * Off Canvas 
  */
-/* line 141, ../sass/screen.scss */
-.main-nav {
+/* line 146, ../sass/screen.scss */
+.offcanvas-right {
+  display: block;
+  background: #666;
   position: fixed;
   display: block;
   top: 0;
   right: 0;
   width: 200px;
   height: 100%;
+  z-index: 2;
+  -webkit-box-shadow: inset 5px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 5px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateX(200px);
+  -moz-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  -o-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transform: translate3d(200px, 0, 0);
+  -moz-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  -o-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0);
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer */
+  backface-visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 190, ../sass/screen.scss */
+.offcanvas-right-show {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: visible;
+  /* Chrome and Safari */
+  -moz-backface-visibility: visible;
+  /* Firefox */
+  -ms-backface-visibility: visible;
+  /* Internet Explorer */
+  backface-visibility: visible;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 217, ../sass/screen.scss */
+.toRight {
+  -webkit-transform: translateX(-200px);
+  -moz-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  -o-transform: translateX(-200px);
+  transform: translateX(-200px);
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -moz-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  -o-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/**
+ * Main Navigation 
+ */
+/* line 240, ../sass/screen.scss */
+.main-nav {
   /* Remove underline text on main-navigation */
 }
-/* line 150, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .main-nav a {
   text-decoration: none;
+  display: block;
+}
+
+/* line 255, ../sass/screen.scss */
+#toggleNav {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 /**
  * Styling Hero Unit
  */
-/* line 161, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 #hero {
   width: 100% !important;
   background: url(../img/bg/dpn-bw-s.jpg);
@@ -525,7 +619,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Extra large Text for Hero Page
  */
-/* line 172, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 .slogan {
   text-transform: capitalize;
   font-style: italic;
@@ -534,24 +628,24 @@ html.no-js #homeTopNav__btn:hover {
   color: #f39c12;
 }
 @media only screen and (max-width: 30em) {
-  /* line 172, ../sass/screen.scss */
+  /* line 277, ../sass/screen.scss */
   .slogan {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 .horizontal-scroll {
   width: 100%;
   overflow-x: auto;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 .list-horizontal {
   width: 500%;
 }
-/* line 198, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .list-horizontal > li {
   display: inline;
   float: left;
@@ -560,27 +654,27 @@ html.no-js #homeTopNav__btn:hover {
 /**
 * Typography Helper
 */
-/* line 217, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .text--left {
   text-align: left !important;
 }
 
-/* line 218, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .text--right {
   text-align: right !important;
 }
 
-/* line 219, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 .text--center {
   text-align: center !important;
 }
 
-/* line 221, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 .text--white {
   color: #fcfcfc !important;
 }
 
-/* line 222, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 .text--orange {
   color: #f39c12 !important;
 }
@@ -588,7 +682,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Background Helper
  */
-/* line 229, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .bg-orange {
   background-color: #f39c12 !important;
 }
@@ -596,7 +690,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
 * layout Helper
 */
-/* line 235, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 .full-page {
   width: 100%;
   height: 250px;
@@ -605,25 +699,30 @@ html.no-js #homeTopNav__btn:hover {
   padding: 0 !important;
 }
 
-/* line 243, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 .full-width {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-/* line 248, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .side--pad {
   padding-left: 5% !important;
   padding-right: 5% !important;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 .flush {
   margin: 0px !important;
   padding: 0px !important;
 }
 
-/* line 252, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
+.flush-bottom {
+  margin-bottom: 0px !important;
+}
+
+/* line 357, ../sass/screen.scss */
 .two-third {
   width: 66.666%;
 }

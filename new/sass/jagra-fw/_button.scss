@@ -32,7 +32,7 @@
 .btn {
     -webkit-appearance: none; /* 1 */
     background: transparent;
-    border: 1px solid;
+    //border: 1px solid;
     -moz-box-sizing: border-box;
     box-sizing: border-box; /* 2 */
     color: inherit; /* 3 */
@@ -59,7 +59,7 @@
  */
 
 html.touch {
-    .btn { padding: 1em 0.75em;}
+    .btn { padding: 1.3em 0.75em;}
 }
 
 
@@ -96,4 +96,8 @@ html.touch {
 .btn--full {
     display: block;
     width: 100%;
+}
+
+.btn--call {
+    background: red;
 }
