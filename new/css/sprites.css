@@ -1,0 +1,74 @@
+.icon-icon1344,.icon-icon1335,.icon-icon1333,.icon-icon1289,.icon-icon1286,.icon-icon1259,.icon-icon1245,.icon-icon1244,.icon-icon1121,.icon-icon1118,.icon-icon1111,.icon-icon1110,.icon-icon1109,.icon-icon1108,.icon-icon1102,.icon-icon1088,.icon-twitter,.icon-facebook,.icon-googleplus,.icon-pinterest,.icon-dribbble,.icon-phone {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-image: url(icon/sprites.svg);
+	background-repeat: no-repeat;
+}
+.icon-icon1344 {
+	background-position: 0 0;
+}
+.icon-icon1335 {
+	background-position: -64px 0;
+}
+.icon-icon1333 {
+	background-position: -128px 0;
+}
+.icon-icon1289 {
+	background-position: -192px 0;
+}
+.icon-icon1286 {
+	background-position: -256px 0;
+}
+.icon-icon1259 {
+	background-position: -320px 0;
+}
+.icon-icon1245 {
+	background-position: -384px 0;
+}
+.icon-icon1244 {
+	background-position: -448px 0;
+}
+.icon-icon1121 {
+	background-position: -512px 0;
+}
+.icon-icon1118 {
+	background-position: -576px 0;
+}
+.icon-icon1111 {
+	background-position: -640px 0;
+}
+.icon-icon1110 {
+	background-position: -704px 0;
+}
+.icon-icon1109 {
+	background-position: -768px 0;
+}
+.icon-icon1108 {
+	background-position: -832px 0;
+}
+.icon-icon1102 {
+	background-position: -896px 0;
+}
+.icon-icon1088 {
+	background-position: -960px 0;
+}
+.icon-twitter {
+	background-position: 0 -64px;
+}
+.icon-facebook {
+	background-position: -64px -64px;
+}
+.icon-googleplus {
+	background-position: -128px -64px;
+}
+.icon-pinterest {
+	background-position: -192px -64px;
+	height: 26px;
+}
+.icon-dribbble {
+	background-position: -256px -64px;
+}
+.icon-phone {
+	background-position: -320px -64px;
+}
