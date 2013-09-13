@@ -288,6 +288,23 @@ html.no-js {
 }
 
 
+.accordion {
+
+}
+
+.accordion__header {
+	line-height: 3rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-weight: 800;
+	color: #222;
+	padding: 0 5%;
+}
+
+
+
+
 
 
 
@@ -309,7 +326,16 @@ html.no-js {
  */
 .bg--white {background-color:#fcfcfc!important;}
 .bg--orange {background-color:#ffa500!important;}
-
+.bg--orange-1 {background-color:#ffae19!important;}
+.bg--orange-2 {background-color:#ffb732!important;}
+.bg--orange-3 {background-color:#ffc04c!important;}
+.bg--orange-4 {background-color:#ffc966!important;}
+.bg--orange-5 {background-color:#ffd27f!important;}
+.bg--orange-6 {background-color:#ffdb99!important;}
+.bg--orange-7 {background-color:#ffe4b2!important;}
+.bg--orange-8 {background-color:#ffedcc!important;}
+.bg--orange-9 {background-color:#fff6e5!important;}
+.bg--orange-10 {background-color:lighten(#ffa500, 91.74%)!important;}
 
  /**
  * layout Helper
