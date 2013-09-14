@@ -2,75 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* ==========================================================================
-   Base (https://github.com/suitcss/base) + modifed
-   ========================================================================== */
-/**
- * A thin layer on top of normalize.css that provides a starting point more
- * suitable for web applications. Removes the default spacing and border for
- * appropriate elements.
- */
-/*
- * 1. Reset typography, will add manualy. see _typo.scss
- */
-/* line 25, ../sass/jagra-fw/_reset.scss */
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-pre {
-  margin: 0;
-  padding: 0;
-  /* 1 */
-  line-height: 1;
-  /* 1 */
-}
-
-/* line 31, ../sass/jagra-fw/_reset.scss */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 37, ../sass/jagra-fw/_reset.scss */
-iframe {
-  border: 0;
-}
-
-/* line 42, ../sass/jagra-fw/_reset.scss */
-ol,
-ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-/**
- * Suppress the focus outline on links that cannot be accessed via keyboard.
- * This prevents an unwanted focus outline from appearing around elements that
- * might still respond to pointer events.
- */
-/* line 54, ../sass/jagra-fw/_reset.scss */
-[tabindex="-1"] {
-  outline: none;
-}
-
-/**
- * Remove margin-bottom on hgroup or module last-child
- */
-/* line 65, ../sass/jagra-fw/_reset.scss */
-hgroup *:last-child,
-.module *:last-child {
-  margin-bottom: 0;
-}
-
 /**
  * Typography
  */
@@ -532,62 +463,10 @@ nav a {
     width: 25%;
   }
 }
-/* ==========================================================================
-    $ Helper Class
-   ========================================================================== */
-/**
- * Text align
- */
-/* line 9, ../sass/jagra-fw/_helper.scss */
-.text--left {
-  text-align: left !important;
-}
-
-/* line 10, ../sass/jagra-fw/_helper.scss */
-.text--right {
-  text-align: right !important;
-}
-
-/* line 11, ../sass/jagra-fw/_helper.scss */
-.text--center {
-  text-align: center !important;
-}
-
-/**
- * Text Color
- */
-/* line 17, ../sass/jagra-fw/_helper.scss */
-.text--white {
-  color: #fcfcfc !important;
-}
-
-/* line 18, ../sass/jagra-fw/_helper.scss */
-.text--black {
-  color: #222222 !important;
-}
-
-/**
- * Text Transform
- */
-/* line 25, ../sass/jagra-fw/_helper.scss */
-.caps {
-  text-transform: uppercase !important;
-}
-
-/* line 26, ../sass/jagra-fw/_helper.scss */
-.capital {
-  text-transform: capitalize !important;
-}
-
-/* line 27, ../sass/jagra-fw/_helper.scss */
-.lowercap {
-  text-transform: lowercase !important;
-}
-
 /**
  * add padding on section
  */
-/* line 31, ../sass/screen.scss */
+/* line 31, ../sass/screen-2.scss */
 .container {
   max-width: 1140px;
   width: 90%;
@@ -595,12 +474,12 @@ nav a {
   margin: 0 auto;
   /* Reset last element margin inside section to 0 */
 }
-/* line 39, ../sass/screen.scss */
+/* line 39, ../sass/screen-2.scss */
 .container > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 44, ../sass/screen-2.scss */
 blockquote {
   margin: 16px 0;
   margin: 1rem 0;
@@ -613,17 +492,17 @@ blockquote {
 /**
  * Conditional CSS
  */
-/* line 58, ../sass/screen.scss */
+/* line 58, ../sass/screen-2.scss */
 html.no-js .offcanvas-right {
   display: block;
   position: static;
 }
-/* line 63, ../sass/screen.scss */
+/* line 63, ../sass/screen-2.scss */
 html.no-js .toggle--nav {
   display: none;
   visibility: hidden;
 }
-/* line 69, ../sass/screen.scss */
+/* line 69, ../sass/screen-2.scss */
 html.no-js .main-nav {
   position: static;
   font-size: 14px;
@@ -633,7 +512,7 @@ html.no-js .main-nav {
   height: auto;
   margin: 0 auto;
 }
-/* line 78, ../sass/screen.scss */
+/* line 78, ../sass/screen-2.scss */
 html.no-js .main-nav > a {
   display: table-cell;
   vertical-align: middle;
@@ -644,12 +523,12 @@ html.no-js .main-nav > a {
   color: #fcfcfc;
   text-align: center;
 }
-/* line 88, ../sass/screen.scss */
+/* line 88, ../sass/screen-2.scss */
 html.no-js .main-nav > a:hover {
   color: #fcfcfc;
   background: #f39c12;
 }
-/* line 96, ../sass/screen.scss */
+/* line 96, ../sass/screen-2.scss */
 html.no-js #homeTopNav__btn {
   background-color: transparent;
   background-image: url(icon/home.png);
@@ -665,7 +544,7 @@ html.no-js #homeTopNav__btn {
   color: black;
   text-indent: -9999px;
 }
-/* line 111, ../sass/screen.scss */
+/* line 111, ../sass/screen-2.scss */
 html.no-js #homeTopNav__btn:hover {
   color: #fcfcfc;
   background-color: #f39c12;
@@ -674,7 +553,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Off Canvas 
  */
-/* line 123, ../sass/screen.scss */
+/* line 123, ../sass/screen-2.scss */
 .offcanvas-right {
   display: block;
   background: #666;
@@ -710,7 +589,7 @@ html.no-js #homeTopNav__btn:hover {
   transition: all 0.5s ease;
 }
 
-/* line 167, ../sass/screen.scss */
+/* line 167, ../sass/screen-2.scss */
 .offcanvas-right-show {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -735,7 +614,7 @@ html.no-js #homeTopNav__btn:hover {
   transition: all 0.5s ease;
 }
 
-/* line 194, ../sass/screen.scss */
+/* line 194, ../sass/screen-2.scss */
 .toRight {
   -webkit-transform: translateX(-200px);
   -moz-transform: translateX(-200px);
@@ -756,7 +635,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Responsive IMages
  */
-/* line 217, ../sass/screen.scss */
+/* line 217, ../sass/screen-2.scss */
 .img-r {
   width: 100%;
   height: auto;
@@ -765,12 +644,12 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Main Navigation 
  */
-/* line 228, ../sass/screen.scss */
+/* line 228, ../sass/screen-2.scss */
 .main-content {
   z-index: 5;
 }
 
-/* line 234, ../sass/screen.scss */
+/* line 234, ../sass/screen-2.scss */
 #toggleNav {
   position: fixed;
   top: 0;
@@ -780,7 +659,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Styling Hero Unit
  */
-/* line 245, ../sass/screen.scss */
+/* line 245, ../sass/screen-2.scss */
 #hero {
   width: 100% !important;
   background: url(../img/bg/dpn-bw-s.jpg);
@@ -791,7 +670,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Extra large Text for Hero Page
  */
-/* line 256, ../sass/screen.scss */
+/* line 256, ../sass/screen-2.scss */
 .slogan {
   font-family: "Hofler Text", "Droid Serif", georgia, serif;
   text-transform: capitalize;
@@ -802,14 +681,14 @@ html.no-js #homeTopNav__btn:hover {
   letter-spacing: -1px;
 }
 @media only screen and (max-width: 30em) {
-  /* line 256, ../sass/screen.scss */
+  /* line 256, ../sass/screen-2.scss */
   .slogan {
     font-size: 32px;
     font-size: 2rem;
   }
 }
 @media only screen and (min-width: 60em) {
-  /* line 256, ../sass/screen.scss */
+  /* line 256, ../sass/screen-2.scss */
   .slogan {
     /* Old browser */
     font-size: 48;
@@ -818,7 +697,7 @@ html.no-js #homeTopNav__btn:hover {
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 256, ../sass/screen.scss */
+  /* line 256, ../sass/screen-2.scss */
   .slogan {
     /* Old browser */
     font-size: 58;
@@ -827,31 +706,30 @@ html.no-js #homeTopNav__btn:hover {
   }
 }
 
-/* line 283, ../sass/screen.scss */
+/* line 283, ../sass/screen-2.scss */
 .horizontal-scroll {
   width: 100%;
   overflow-x: auto;
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 288, ../sass/screen-2.scss */
 .list-horizontal {
   width: 500%;
 }
-/* line 291, ../sass/screen.scss */
+/* line 291, ../sass/screen-2.scss */
 .list-horizontal > li {
   display: inline;
   float: left;
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 302, ../sass/screen-2.scss */
 .accordion {
   height: 160px;
-  height: 6rem;
-  padding: 1px;
+  height: 10rem;
   display: block;
 }
 
-/* line 309, ../sass/screen.scss */
+/* line 308, ../sass/screen-2.scss */
 .accordion__header {
   text-decoration: none;
   text-transform: uppercase;
@@ -866,17 +744,37 @@ html.no-js #homeTopNav__btn:hover {
 /**
 * Typography Helper
 */
-/* line 332, ../sass/screen.scss */
+/* line 330, ../sass/screen-2.scss */
+.text--left {
+  text-align: left !important;
+}
+
+/* line 331, ../sass/screen-2.scss */
+.text--right {
+  text-align: right !important;
+}
+
+/* line 332, ../sass/screen-2.scss */
+.text--center {
+  text-align: center !important;
+}
+
+/* line 334, ../sass/screen-2.scss */
+.text--white {
+  color: #fcfcfc !important;
+}
+
+/* line 335, ../sass/screen-2.scss */
 .text--orange {
   color: #f39c12 !important;
 }
 
-/* line 334, ../sass/screen.scss */
+/* line 337, ../sass/screen-2.scss */
 .text--shadow {
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* line 336, ../sass/screen.scss */
+/* line 339, ../sass/screen-2.scss */
 .caps {
   text-transform: uppercase !important;
 }
@@ -884,52 +782,52 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Background Helper
  */
-/* line 344, ../sass/screen.scss */
+/* line 347, ../sass/screen-2.scss */
 .bg--white {
   background-color: #fcfcfc !important;
 }
 
-/* line 345, ../sass/screen.scss */
+/* line 348, ../sass/screen-2.scss */
 .bg--orange {
   background-color: orange !important;
 }
 
-/* line 346, ../sass/screen.scss */
+/* line 349, ../sass/screen-2.scss */
 .bg--black {
-  background-color: black !important;
+  background-color: #222222 !important;
 }
 
-/* line 352, ../sass/screen.scss */
+/* line 355, ../sass/screen-2.scss */
 .bg--billboard {
   background: url(../img/thumb/billboard.jpg) center center no-repeat;
 }
 
-/* line 353, ../sass/screen.scss */
+/* line 356, ../sass/screen-2.scss */
 .bg--custom {
   background: url(../img/thumb/custom2.jpg) center center no-repeat;
 }
 
-/* line 354, ../sass/screen.scss */
+/* line 357, ../sass/screen-2.scss */
 .bg--huruftimbul {
   background: url(../img/thumb/huruftimbul.jpg) center center no-repeat;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 358, ../sass/screen-2.scss */
 .bg--konstruksi {
   background: url(../img/thumb/konstruksi.jpg) center center no-repeat;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 359, ../sass/screen-2.scss */
 .bg--neonbox {
   background: url(../img/thumb/neonbox.jpg) center center no-repeat;
 }
 
-/* line 357, ../sass/screen.scss */
+/* line 360, ../sass/screen-2.scss */
 .bg--marka {
   background: url(../img/thumb/plangsign2.jpg) center center no-repeat;
 }
 
-/* line 366, ../sass/screen.scss */
+/* line 369, ../sass/screen-2.scss */
 .bg--banner,
 .bg--billboard,
 .bg--custom,
@@ -942,44 +840,44 @@ html.no-js #homeTopNav__btn:hover {
   background-size: cover;
 }
 
-/* line 370, ../sass/screen.scss */
+/* line 373, ../sass/screen-2.scss */
 .bg--office {
   background: url(../img/thumb/office-bw.jpg) top center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-/* line 378, ../sass/screen.scss */
+/* line 381, ../sass/screen-2.scss */
 .bg--orange-4 {
   background-color: #d47517 !important;
 }
 
-/* line 379, ../sass/screen.scss */
+/* line 382, ../sass/screen-2.scss */
 .bg--orange-5 {
   background-color: #e0a21b !important;
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 383, ../sass/screen-2.scss */
 .bg--orange-6 {
   background-color: #8aa4b1 !important;
 }
 
-/* line 381, ../sass/screen.scss */
+/* line 384, ../sass/screen-2.scss */
 .bg--orange-7 {
   background-color: #597684 !important;
 }
 
-/* line 382, ../sass/screen.scss */
+/* line 385, ../sass/screen-2.scss */
 .bg--orange-8 {
   background-color: #b5ab90 !important;
 }
 
-/* line 383, ../sass/screen.scss */
+/* line 386, ../sass/screen-2.scss */
 .bg--orange-9 {
   background-color: #ebe1ae !important;
 }
 
-/* line 384, ../sass/screen.scss */
+/* line 387, ../sass/screen-2.scss */
 .bg--orange-10 {
   background-color: #75675c !important;
 }
@@ -987,7 +885,7 @@ html.no-js #homeTopNav__btn:hover {
 /**plangsign2
 * layout Helper
 */
-/* line 389, ../sass/screen.scss */
+/* line 392, ../sass/screen-2.scss */
 .full_page {
   width: 100%;
   height: 320px;
@@ -995,51 +893,51 @@ html.no-js #homeTopNav__btn:hover {
   padding: 0 !important;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 399, ../sass/screen-2.scss */
 .full-width {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-/* line 402, ../sass/screen.scss */
+/* line 405, ../sass/screen-2.scss */
 .full--height {
   height: 100vh;
 }
 
-/* line 406, ../sass/screen.scss */
+/* line 409, ../sass/screen-2.scss */
 .pad--top-large {
   padding: .5rem 0;
 }
 
-/* line 407, ../sass/screen.scss */
+/* line 410, ../sass/screen-2.scss */
 .side--pad {
   padding-left: 5% !important;
   padding-right: 5% !important;
 }
 
-/* line 408, ../sass/screen.scss */
+/* line 411, ../sass/screen-2.scss */
 .tall--pad {
   padding-top: 2rem !important;
   padding-bottom: 4rem !important;
 }
 
-/* line 409, ../sass/screen.scss */
+/* line 412, ../sass/screen-2.scss */
 .flush {
   margin: 0px !important;
   padding: 0px !important;
 }
 
-/* line 410, ../sass/screen.scss */
+/* line 413, ../sass/screen-2.scss */
 .flush-top {
   margin-top: 0px !important;
 }
 
-/* line 411, ../sass/screen.scss */
+/* line 414, ../sass/screen-2.scss */
 .flush-bottom {
   margin-bottom: 0px !important;
 }
 
-/* line 412, ../sass/screen.scss */
+/* line 415, ../sass/screen-2.scss */
 .two-third {
   width: 66.666%;
 }

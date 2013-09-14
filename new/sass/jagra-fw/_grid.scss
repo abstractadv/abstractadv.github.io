@@ -129,3 +129,8 @@
 .one-five {width: 20%;}
 
 .golden-big {width: 65%}
+
+@include bp(mama-bear) {
+    .mama-one-half {width: 50%}
+    .mama-one-quarter {width: 25%}
+}

@@ -93,6 +93,8 @@ html.touch {
  * Modifier: full-width buttons
  */
 
+.btn--round {border-radius: 8px}
+
 .btn--full {
     display: block;
     width: 100%;
@@ -120,5 +122,5 @@ html.touch {
 }
 
 .btn--big {
-    
+    padding: 1.3em 0.75em;
 }

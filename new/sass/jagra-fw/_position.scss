@@ -31,17 +31,30 @@
 
 /**
  * Absolute Center with Table cell technique
+ *
+ * Usage :
+ * <div class="absolute-center__outer-container">
+ *		<div class="absolute-center__inner-item">
+ *			<div class="absolute-center__item">
+ *				....
+ *			</div>
+ *		</div>
+ * </div>
+ *
  */
 
- .absolute-center__container {
+.absolute-center__outer-container {
 	display: table;
-	vertical-align: middle;
 	width: 100%;
+	height: 100%;
+}
 
-	.absolute-center__item {
-		display: table-cell;
-		vertical-align: middle;
-		margin: 0 auto;
-		text-align: center;
-	}
+.absolute-center__inner-container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.absolute-center_item {
+	display: block;
+	margin: 0 auto;
 }

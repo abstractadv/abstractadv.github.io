@@ -1,83 +1,32 @@
-// slider setting
+// ios patch
 MBP.scaleFix();
 MBP.hideUrlBarOnLoad();
 MBP.enableActive();
 MBP.preventZoom();
 
 
-$(document).ready(function(){
-  
+// full height
+function fullHeightHero() {
 
-  //get viewport width
-  var flipitemWidth = $(window).width() * 0.98;
-  var flipsnapitemcount =  $('.flipsnap > div').size();
-  var flipsnapwidth = flipitemWidth * flipsnapitemcount;
+  var fullHeightClass = document.getElementById("hero");
+  var viewportHeight = (window.innerHeight * 0.95) + "px";
 
+  fullHeightClass.style.height=viewportHeight;
+}
 
-  $('.flipsnap > div').css('width', flipitemWidth);
-  $('.flipsnap').css('width', flipsnapwidth);
+function fullHeightContact() {
 
+  var fullHeightClass = document.getElementById("contact");
+  var viewportHeight = window.innerHeight + "px";
 
-  // Menu toogle open
-  var togglemenu = $('#menu-toggle');
-  togglemenu.on('click', function(e){
-    // for disable link function
-    event.preventDefault();
-    $('#main-nav').addClass('slide-left-in');
-  });
-  
-  var toggleClose = $('#menu-toggle-close');
-  toggleClose.on('click', function(e){
-    event.preventDefault();
-  $('#main-nav').removeClass('slide-left-in');
-  });
-  
-  
+  fullHeightClass.style.height=viewportHeight;
+}
 
-//  $$('.item').swipeLeft(function(){
-//    $('.flipsnap').css({
-//      '-webkit-transform': 'translateZ(0)',
-//      'transform': 'translate(-25%)',
-//      '-webkit-transition':'all 1s',
-//    });
-//  });
-//
-//  $$('.item').swipeRight(function(){
-//    $('.flipsnap').css({
-//      'transform': 'translate(0)',
-//      '-webkit-transform': 'translateZ(0)',
-//      '-webkit-transition':'all 1s',
-//    });
-//  });
-  
-
-}); //zepto doc ready function
-
-//
-
-
-(function(){
-  var ViewDetector = document.createElement('div');
-  document.getElementsByTagName('body')[0].insertBefore(ViewDetector).id = 'viewport-detector';
-
-  window.onresize = dynamicResizer;
-  window.onload = dynamicResizer;
-
-  function dynamicResizer() {
-    var docWidth = window.innerWidth(),
-        docHeight = window.innerHeight();
-    spanDimensions.innerHTML = docWidth + "X" + docHeight;
-  }
+fullHeightHero();
+fullHeightContact();
 
 
 
-})
-
-
-
-
-// flipsnap configuration
-//Flipsnap('.flipsnap');
 
 
 
