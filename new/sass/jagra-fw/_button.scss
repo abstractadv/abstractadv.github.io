@@ -122,5 +122,71 @@ html.touch {
 }
 
 .btn--big {
-    padding: 1.3em 0.75em;
+    padding: 1.3em 1em;
 }
+
+
+/**
+ * Button Animation
+ */
+
+ .btn-ani {
+    padding: 1em 3em;
+    &:hover {
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+ }
+
+ .btn-ani--next {
+    position: relative;
+    &:after,
+    &:focus {
+        content:"\2192";
+        position: absolute;
+        visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        opacity: 0;
+
+
+      -webkit-transform: translateX(-5px); 
+         -moz-transform: translateX(-5px); 
+          -ms-transform: translateX(-5px); 
+           -o-transform: translateX(-5px); 
+              transform: translateX(-5px); 
+
+
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            opacity: 1;
+            content:"\2192";
+            position: absolute;
+            visibility: visible;
+            -webkit-backface-visibility: visible;
+            -moz-backface-visibility: visible;
+            -ms-backface-visibility: visible;
+            backface-visibility: visible;
+
+          -webkit-transform: translateX(15px); 
+             -moz-transform: translateX(15px); 
+              -ms-transform: translateX(15px); 
+               -o-transform: translateX(15px); 
+                  transform: translateX(15px); 
+        }
+    }
+ }

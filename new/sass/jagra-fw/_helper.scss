@@ -9,7 +9,7 @@
 .text--left {text-align: left!important}
 .text--right {text-align: right!important}
 .text--center {text-align: center!important}
-
+.text--justify {text-align: justify!important;}
 
 /**
  * Text Color
@@ -25,3 +25,38 @@
 .caps {text-transform: uppercase!important;}
 .capital {text-transform: capitalize!important;}
 .lowercap {text-transform: lowercase!important;}
+
+/**
+ * Text Weight
+ */
+
+.text--bold {font-weight: 800!important;}
+
+
+
+/**
+ * Margin and Padding Helper
+ */
+
+// Set Base Spav
+
+
+ /* Padding */
+
+/* Normal Pad */
+.pad-top { padding-top: $base-spacing-unit!important}
+.pad-bottom { padding-bottom: $base-spacing-unit!important}
+.pad-left {padding-left: $base-spacing-unit!important}
+.pad-right {padding-right: $base-spacing-unit!important}
+.pad-side {padding-right: $base-spacing-unit!important; padding-left: $base-spacing-unit!important}
+.pad-tall {padding-top: $base-spacing-unit!important;padding-bottom: $base-spacing-unit!important}
+.pad-all {padding: $base-spacing-unit!important}
+
+/* Large Pad */
+.pad-top--large { padding-top: $base-spacing-unit*3!important}
+.pad-bottom--large { padding-bottom: $base-spacing-unit*3!important}
+.pad-left--large {padding-left: $base-spacing-unit*3!important}
+.pad-right--large {padding-right: $base-spacing-unit*3!important}
+.pad-side--large {padding-right: $base-spacing-unit*3!important; padding-left: $base-spacing-unit*3!important}
+.pad-tall--large {padding-top: $base-spacing-unit*3!important;padding-bottom: $base-spacing-unit*3!important}
+.pad-all--large {padding: $base-spacing-unit*3!important}

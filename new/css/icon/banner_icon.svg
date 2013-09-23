@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="900px" height="900px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 61.5547 61.5547"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+    .fil1 {fill:#1F1A17}
+    .fil2 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_63995176">
+   <rect id="_64007688" class="fil0" width="61.5547" height="61.5547"/>
+   <g>
+    <rect id="_64006808" class="fil1" x="18.1984" y="14.2607" width="25.158" height="31.3481"/>
+    <g>
+     <polygon id="_64005080" class="fil2" points="20.7631,16.8255 40.7916,16.8255 40.7916,43.0441 20.7631,43.0441 "/>
+    </g>
+    <rect id="_64004032" class="fil1" x="16.626" y="49.0651" width="28.3027" height="5.12964" rx="0.271725" ry="0.271725"/>
+    <g>
+     <path id="_64002912" class="fil1" d="M17.3597 8.10526l26.8432 0c0.141997,0 0.301942,0.488242 0.258094,1.02844l-0.249612 3.07274c-0.0438487,0.539891 -0.116475,1.02844 -0.258094,1.02844l-26.1577 0c-0.141618,0 -0.187209,-0.528759 -0.258018,-1.02844l-0.435836 -3.07274c-0.0707334,-0.499602 0.116021,-1.02844 0.258018,-1.02844z"/>
+     <rect id="_64002096" class="fil1" x="29.2812" y="4.51449" width="2.99232" height="2.56484"/>
+     <rect id="_64000624" class="fil1" x="28.982" y="1.43697" width="3.59065" height="2.0517" rx="0.0480896" ry="0.0480896"/>
+    </g>
+    <polygon id="_63999496" class="fil1" points="44.7034,48.0392 44.2275,48.0392 43.5757,48.0392 17.979,48.0392 17.8082,48.0392 16.8513,48.0392 17.979,45.9632 17.979,46.6346 43.5757,46.6346 43.5757,45.9632 "/>
+    <g>
+     <path id="_63998312" class="fil1" d="M22.6951 58.6575c-0.731795,0.806391 -2.47378,1.46033 -3.89003,1.46033 -1.41626,0 -1.97122,-0.653943 -1.23942,-1.46033l3.11909 -3.43686 5.12946 0 -3.11909 3.43686z"/>
+     <path id="_63996608" class="fil1" d="M38.8596 58.6575c0.731795,0.806391 2.47378,1.46033 3.89003,1.46033 1.41626,0 1.97122,-0.653943 1.23942,-1.46033l-3.11909 -3.43686 -5.12946 0 3.11909 3.43686z"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

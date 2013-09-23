@@ -2,6 +2,9 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/**
+ * Vendor Prefix
+ */
 /* ==========================================================================
    Base (https://github.com/suitcss/base) + modifed
    ========================================================================== */
@@ -13,7 +16,7 @@
 /*
  * 1. Reset typography, will add manualy. see _typo.scss
  */
-/* line 25, ../sass/jagra-fw/_reset.scss */
+/* line 26, ../sass/jagra-fw/_reset.scss */
 blockquote,
 dl,
 dd,
@@ -24,27 +27,29 @@ h4,
 h5,
 h6,
 p,
-pre {
+pre,
+blockquote {
   margin: 0;
   padding: 0;
   /* 1 */
   line-height: 1;
   /* 1 */
+  border: none;
 }
 
-/* line 31, ../sass/jagra-fw/_reset.scss */
+/* line 33, ../sass/jagra-fw/_reset.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 37, ../sass/jagra-fw/_reset.scss */
+/* line 39, ../sass/jagra-fw/_reset.scss */
 iframe {
   border: 0;
 }
 
-/* line 42, ../sass/jagra-fw/_reset.scss */
+/* line 44, ../sass/jagra-fw/_reset.scss */
 ol,
 ul {
   margin: 0;
@@ -57,7 +62,7 @@ ul {
  * This prevents an unwanted focus outline from appearing around elements that
  * might still respond to pointer events.
  */
-/* line 54, ../sass/jagra-fw/_reset.scss */
+/* line 56, ../sass/jagra-fw/_reset.scss */
 [tabindex="-1"] {
   outline: none;
 }
@@ -65,7 +70,7 @@ ul {
 /**
  * Remove margin-bottom on hgroup or module last-child
  */
-/* line 65, ../sass/jagra-fw/_reset.scss */
+/* line 67, ../sass/jagra-fw/_reset.scss */
 hgroup *:last-child,
 .module *:last-child {
   margin-bottom: 0;
@@ -76,34 +81,131 @@ hgroup *:last-child,
  */
 /* line 5, ../sass/jagra-fw/_typo.scss */
 html {
-  font-size: 87.5%;
-  line-height: 1.3;
+  font-size: 100%;
+  line-height: 1.4;
 }
 @media only screen and (min-width: 60em) {
   /* line 5, ../sass/jagra-fw/_typo.scss */
   html {
-    font-size: 110%;
-    line-height: 1.5;
+    font-size: 120%;
+    line-height: 1.6;
   }
 }
 
 /* line 15, ../sass/jagra-fw/_typo.scss */
 body {
-  font-family: "Roboto", "Segoe WP", "Segoe UI", "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, Sans-serif;
+  font-family: georgia;
   font-weight: 300;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  color: #444444;
 }
 
-/* line 20, ../sass/jagra-fw/_typo.scss */
+/* line 28, ../sass/jagra-fw/_typo.scss */
 h1, h2, h3, h4, h5, h6, q {
-  font-family: "Hofler Text", "Droid Serif", georgia, serif;
+  font-family: "Helvetica neue";
+  line-height: 1;
+  margin-top: 0;
   color: inherit;
-  font-weight: 400;
-  color: orange;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
 }
 
-/* line 38, ../sass/jagra-fw/_typo.scss */
+/* line 43, ../sass/jagra-fw/_typo.scss */
+h2 {
+  /* Old browser */
+  font-size: 32;
+  /* Modern Browser */
+  font-size: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 49, ../sass/jagra-fw/_typo.scss */
+p {
+  margin-bottom: 16px;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+@media only screen and (min-width: 60em) {
+  /* line 49, ../sass/jagra-fw/_typo.scss */
+  p {
+    line-height: 1.5;
+  }
+}
+
+/* line 59, ../sass/jagra-fw/_typo.scss */
 q {
   font-style: italic;
+}
+
+/* line 64, ../sass/jagra-fw/_typo.scss */
+cite {
+  display: block;
+  text-align: right;
+}
+/* line 67, ../sass/jagra-fw/_typo.scss */
+cite:before {
+  content: "- ";
+}
+
+/* line 74, ../sass/jagra-fw/_typo.scss */
+.lead {
+  /* Old browser */
+  font-size: 18;
+  /* Modern Browser */
+  font-size: 1.125rem;
+}
+
+/**
+ * Extra large Text for Hero Page
+ */
+/* line 82, ../sass/jagra-fw/_typo.scss */
+.slogan {
+  display: block;
+  font-family: "Hofler Text", "Droid Serif", georgia, serif;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: bold;
+  font-weight: 800;
+  color: inherit;
+  letter-spacing: -1px;
+}
+@media only screen and (max-width: 48em) {
+  /* line 82, ../sass/jagra-fw/_typo.scss */
+  .slogan {
+    /* Old browser */
+    font-size: 19.5;
+    /* Modern Browser */
+    font-size: 1.21875rem;
+  }
+}
+@media only screen and (min-width: 60em) {
+  /* line 82, ../sass/jagra-fw/_typo.scss */
+  .slogan {
+    /* Old browser */
+    font-size: 29.25;
+    /* Modern Browser */
+    font-size: 1.82813rem;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 82, ../sass/jagra-fw/_typo.scss */
+  .slogan {
+    /* Old browser */
+    font-size: 43.875;
+    /* Modern Browser */
+    font-size: 2.74219rem;
+  }
 }
 
 /* ==========================================================================
@@ -296,7 +398,65 @@ nav a {
 
 /* line 124, ../sass/jagra-fw/_button.scss */
 .btn--big {
-  padding: 1.3em 0.75em;
+  padding: 1.3em 1em;
+}
+
+/**
+ * Button Animation
+ */
+/* line 133, ../sass/jagra-fw/_button.scss */
+.btn-ani {
+  padding: 1em 3em;
+}
+/* line 135, ../sass/jagra-fw/_button.scss */
+.btn-ani:hover {
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+/* line 144, ../sass/jagra-fw/_button.scss */
+.btn-ani--next {
+  position: relative;
+}
+/* line 147, ../sass/jagra-fw/_button.scss */
+.btn-ani--next:after, .btn-ani--next:focus {
+  content: "\2192";
+  position: absolute;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateX(-5px);
+  -moz-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  -o-transform: translateX(-5px);
+  transform: translateX(-5px);
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+/* line 175, ../sass/jagra-fw/_button.scss */
+.btn-ani--next:hover:after, .btn-ani--next:focus:after {
+  opacity: 1;
+  content: "\2192";
+  position: absolute;
+  visibility: visible;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform: translateX(15px);
+  -moz-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  -o-transform: translateX(15px);
+  transform: translateX(15px);
 }
 
 /**
@@ -363,6 +523,20 @@ nav a {
 .absolute-center_item {
   display: block;
   margin: 0 auto;
+}
+
+/* line 62, ../sass/jagra-fw/_position.scss */
+.abs-center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 60%;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* ==========================================================================
@@ -518,20 +692,103 @@ nav a {
 
 /* line 131, ../sass/jagra-fw/_grid.scss */
 .golden-big {
-  width: 65%;
+  width: 62%;
+}
+
+/* line 132, ../sass/jagra-fw/_grid.scss */
+.golden-small {
+  width: 38%;
 }
 
 @media only screen and (min-width: 60em) {
-  /* line 134, ../sass/jagra-fw/_grid.scss */
+  /* line 135, ../sass/jagra-fw/_grid.scss */
   .mama-one-half {
     width: 50%;
   }
 
-  /* line 135, ../sass/jagra-fw/_grid.scss */
+  /* line 136, ../sass/jagra-fw/_grid.scss */
+  .mama-one-third {
+    width: 33.333%;
+  }
+
+  /* line 137, ../sass/jagra-fw/_grid.scss */
   .mama-one-quarter {
     width: 25%;
   }
 }
+/* ==========================================================================
+    $ Modules
+   ========================================================================== */
+/**
+ * Reset Margin bottom of module last chlid 
+ */
+/* line 10, ../sass/jagra-fw/_module.scss */
+.module *:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Default Module
+ */
+/* line 19, ../sass/jagra-fw/_module.scss */
+.module {
+  /* Old browser */
+  padding: 16;
+  /* Modern Browser */
+  padding: 1rem;
+  /* Old browser */
+  margin: 8;
+  /* Modern Browser */
+  margin: 0.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px #ff9900, 2px 2px 1px #ff9900, 3px 3px 1px #ff9900, 4px 2px 1px #ff9900, 5px 5px 1px #ff9900;
+}
+
+/* line 32, ../sass/jagra-fw/_module.scss */
+.module--marginShort {
+  /* Old browser */
+  margin-left: 4;
+  /* Modern Browser */
+  margin-left: 0.25rem;
+  /* Old browser */
+  margin-right: 4;
+  /* Modern Browser */
+  margin-right: 0.25rem;
+}
+
+/**
+ * Extra Space
+ */
+/* line 41, ../sass/jagra-fw/_module.scss */
+.extra-space--up {
+  position: relative;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 2rem !important;
+}
+/* line 46, ../sass/jagra-fw/_module.scss */
+.extra-space--up:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: -24px;
+  top: -1.5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  height: 24px;
+  height: 1.5rem;
+  z-index: 5;
+}
+/* line 63, ../sass/jagra-fw/_module.scss */
+.extra-space--up *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* ==========================================================================
     $ Helper Class
    ========================================================================== */
@@ -551,6 +808,11 @@ nav a {
 /* line 11, ../sass/jagra-fw/_helper.scss */
 .text--center {
   text-align: center !important;
+}
+
+/* line 12, ../sass/jagra-fw/_helper.scss */
+.text--justify {
+  text-align: justify !important;
 }
 
 /**
@@ -585,45 +847,142 @@ nav a {
 }
 
 /**
+ * Text Weight
+ */
+/* line 33, ../sass/jagra-fw/_helper.scss */
+.text--bold {
+  font-weight: 800 !important;
+}
+
+/**
+ * Margin and Padding Helper
+ */
+/* Padding */
+/* Normal Pad */
+/* line 47, ../sass/jagra-fw/_helper.scss */
+.pad-top {
+  padding-top: 1.5rem !important;
+}
+
+/* line 48, ../sass/jagra-fw/_helper.scss */
+.pad-bottom {
+  padding-bottom: 1.5rem !important;
+}
+
+/* line 49, ../sass/jagra-fw/_helper.scss */
+.pad-left {
+  padding-left: 1.5rem !important;
+}
+
+/* line 50, ../sass/jagra-fw/_helper.scss */
+.pad-right {
+  padding-right: 1.5rem !important;
+}
+
+/* line 51, ../sass/jagra-fw/_helper.scss */
+.pad-side {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+/* line 52, ../sass/jagra-fw/_helper.scss */
+.pad-tall {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* line 53, ../sass/jagra-fw/_helper.scss */
+.pad-all {
+  padding: 1.5rem !important;
+}
+
+/* Large Pad */
+/* line 56, ../sass/jagra-fw/_helper.scss */
+.pad-top--large {
+  padding-top: 4.5rem !important;
+}
+
+/* line 57, ../sass/jagra-fw/_helper.scss */
+.pad-bottom--large {
+  padding-bottom: 4.5rem !important;
+}
+
+/* line 58, ../sass/jagra-fw/_helper.scss */
+.pad-left--large {
+  padding-left: 4.5rem !important;
+}
+
+/* line 59, ../sass/jagra-fw/_helper.scss */
+.pad-right--large {
+  padding-right: 4.5rem !important;
+}
+
+/* line 60, ../sass/jagra-fw/_helper.scss */
+.pad-side--large {
+  padding-right: 4.5rem !important;
+  padding-left: 4.5rem !important;
+}
+
+/* line 61, ../sass/jagra-fw/_helper.scss */
+.pad-tall--large {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+/* line 62, ../sass/jagra-fw/_helper.scss */
+.pad-all--large {
+  padding: 4.5rem !important;
+}
+
+/**
  * add padding on section
  */
-/* line 31, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .container {
-  max-width: 1140px;
+  max-width: 900px;
   width: 90%;
   margin: 0 auto;
   margin: 0 auto;
   /* Reset last element margin inside section to 0 */
 }
-/* line 39, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .container > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 44, ../sass/screen.scss */
-blockquote {
-  margin: 16px 0;
-  margin: 1rem 0;
-  padding: 16px;
-  padding: 1rem;
-  border-top: 1px solid #f39c12;
-  border-bottom: 1px solid #f39c12;
+/* line 48, ../sass/screen.scss */
+.container-expand {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 0 auto;
+  /* Reset last element margin inside section to 0 */
+}
+/* line 56, ../sass/screen.scss */
+.container-expand > *:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 48.1em) {
+  /* line 48, ../sass/screen.scss */
+  .container-expand {
+    width: 90%;
+  }
 }
 
 /**
  * Conditional CSS
  */
-/* line 58, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 html.no-js .offcanvas-right {
   display: block;
   position: static;
 }
-/* line 63, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 html.no-js .toggle--nav {
   display: none;
   visibility: hidden;
 }
-/* line 69, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 html.no-js .main-nav {
   position: static;
   font-size: 14px;
@@ -633,7 +992,7 @@ html.no-js .main-nav {
   height: auto;
   margin: 0 auto;
 }
-/* line 78, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 html.no-js .main-nav > a {
   display: table-cell;
   vertical-align: middle;
@@ -644,12 +1003,12 @@ html.no-js .main-nav > a {
   color: #fcfcfc;
   text-align: center;
 }
-/* line 88, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 html.no-js .main-nav > a:hover {
   color: #fcfcfc;
   background: #f39c12;
 }
-/* line 96, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 html.no-js #homeTopNav__btn {
   background-color: transparent;
   background-image: url(icon/home.png);
@@ -665,7 +1024,7 @@ html.no-js #homeTopNav__btn {
   color: black;
   text-indent: -9999px;
 }
-/* line 111, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 html.no-js #homeTopNav__btn:hover {
   color: #fcfcfc;
   background-color: #f39c12;
@@ -674,7 +1033,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Off Canvas 
  */
-/* line 123, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .offcanvas-right {
   display: block;
   background: #666;
@@ -710,7 +1069,7 @@ html.no-js #homeTopNav__btn:hover {
   transition: all 0.5s ease;
 }
 
-/* line 167, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .offcanvas-right-show {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -735,7 +1094,7 @@ html.no-js #homeTopNav__btn:hover {
   transition: all 0.5s ease;
 }
 
-/* line 194, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .toRight {
   -webkit-transform: translateX(-200px);
   -moz-transform: translateX(-200px);
@@ -756,7 +1115,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Responsive IMages
  */
-/* line 217, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .img-r {
   width: 100%;
   height: auto;
@@ -765,12 +1124,7 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Main Navigation 
  */
-/* line 228, ../sass/screen.scss */
-.main-content {
-  z-index: 5;
-}
-
-/* line 234, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 #toggleNav {
   position: fixed;
   top: 0;
@@ -780,70 +1134,53 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Styling Hero Unit
  */
-/* line 245, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 #hero {
   width: 100% !important;
-  background: url(../img/bg/dpn-bw-s.jpg);
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-/**
- * Extra large Text for Hero Page
- */
-/* line 256, ../sass/screen.scss */
-.slogan {
-  font-family: "Hofler Text", "Droid Serif", georgia, serif;
-  text-transform: capitalize;
-  font-style: italic;
-  font-weight: bold;
-  font-weight: 900;
-  color: #f39c12;
-  letter-spacing: -1px;
+/* line 261, ../sass/screen.scss */
+.hero {
+  position: relative;
 }
-@media only screen and (max-width: 30em) {
-  /* line 256, ../sass/screen.scss */
-  .slogan {
-    font-size: 32px;
-    font-size: 2rem;
-  }
-}
-@media only screen and (min-width: 60em) {
-  /* line 256, ../sass/screen.scss */
-  .slogan {
-    /* Old browser */
-    font-size: 48;
-    /* Modern Browser */
-    font-size: 3rem;
-  }
-}
-@media only screen and (min-width: 90em) {
-  /* line 256, ../sass/screen.scss */
-  .slogan {
-    /* Old browser */
-    font-size: 58;
-    /* Modern Browser */
-    font-size: 3.625rem;
-  }
+/* line 263, ../sass/screen.scss */
+.hero:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url("hero-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
-/* line 283, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
+html {
+  background: whitesmoke;
+}
+
+/* line 295, ../sass/screen.scss */
 .horizontal-scroll {
   width: 100%;
   overflow-x: auto;
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 .list-horizontal {
   width: 500%;
 }
-/* line 291, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .list-horizontal > li {
   display: inline;
   float: left;
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .accordion {
   height: 160px;
   height: 6rem;
@@ -851,7 +1188,7 @@ html.no-js #homeTopNav__btn:hover {
   display: block;
 }
 
-/* line 309, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 .accordion__header {
   text-decoration: none;
   text-transform: uppercase;
@@ -866,17 +1203,17 @@ html.no-js #homeTopNav__btn:hover {
 /**
 * Typography Helper
 */
-/* line 332, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .text--orange {
   color: #f39c12 !important;
 }
 
-/* line 334, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .text--shadow {
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* line 336, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 .caps {
   text-transform: uppercase !important;
 }
@@ -884,52 +1221,52 @@ html.no-js #homeTopNav__btn:hover {
 /**
  * Background Helper
  */
-/* line 344, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .bg--white {
-  background-color: #fcfcfc !important;
+  background-color: whitesmoke !important;
 }
 
-/* line 345, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 .bg--orange {
   background-color: orange !important;
 }
 
-/* line 346, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 .bg--black {
   background-color: black !important;
 }
 
-/* line 352, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 .bg--billboard {
   background: url(../img/thumb/billboard.jpg) center center no-repeat;
 }
 
-/* line 353, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .bg--custom {
   background: url(../img/thumb/custom2.jpg) center center no-repeat;
 }
 
-/* line 354, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 .bg--huruftimbul {
   background: url(../img/thumb/huruftimbul.jpg) center center no-repeat;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 364, ../sass/screen.scss */
 .bg--konstruksi {
   background: url(../img/thumb/konstruksi.jpg) center center no-repeat;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 365, ../sass/screen.scss */
 .bg--neonbox {
   background: url(../img/thumb/neonbox.jpg) center center no-repeat;
 }
 
-/* line 357, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 .bg--marka {
   background: url(../img/thumb/plangsign2.jpg) center center no-repeat;
 }
 
-/* line 366, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 .bg--banner,
 .bg--billboard,
 .bg--custom,
@@ -942,52 +1279,78 @@ html.no-js #homeTopNav__btn:hover {
   background-size: cover;
 }
 
-/* line 370, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 .bg--office {
   background: url(../img/thumb/office-bw.jpg) top center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-/* line 378, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 .bg--orange-4 {
   background-color: #d47517 !important;
 }
 
-/* line 379, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 .bg--orange-5 {
   background-color: #e0a21b !important;
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 .bg--orange-6 {
   background-color: #8aa4b1 !important;
 }
 
-/* line 381, ../sass/screen.scss */
+/* line 390, ../sass/screen.scss */
 .bg--orange-7 {
   background-color: #597684 !important;
 }
 
-/* line 382, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 .bg--orange-8 {
   background-color: #b5ab90 !important;
 }
 
-/* line 383, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 .bg--orange-9 {
   background-color: #ebe1ae !important;
 }
 
-/* line 384, ../sass/screen.scss */
+/* line 393, ../sass/screen.scss */
 .bg--orange-10 {
   background-color: #75675c !important;
+}
+
+/* line 395, ../sass/screen.scss */
+.bg--vitaminc {
+  background-color: #ff9900 !important;
+}
+
+/* line 396, ../sass/screen.scss */
+.bg--dark {
+  background-color: #424242 !important;
+}
+
+/* line 397, ../sass/screen.scss */
+.bg--purple {
+  background-color: #540045 !important;
+}
+
+/* line 398, ../sass/screen.scss */
+.bg--sweet {
+  background-color: #c60052 !important;
+}
+
+/* line 399, ../sass/screen.scss */
+.bg--salmon {
+  background-color: #ff714b !important;
 }
 
 /**plangsign2
 * layout Helper
 */
-/* line 389, ../sass/screen.scss */
+/* line 404, ../sass/screen.scss */
 .full_page {
   width: 100%;
   height: 320px;
@@ -995,51 +1358,263 @@ html.no-js #homeTopNav__btn:hover {
   padding: 0 !important;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .full-width {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-/* line 402, ../sass/screen.scss */
+/* line 417, ../sass/screen.scss */
 .full--height {
   height: 100vh;
 }
 
-/* line 406, ../sass/screen.scss */
+/* line 421, ../sass/screen.scss */
 .pad--top-large {
   padding: .5rem 0;
 }
 
-/* line 407, ../sass/screen.scss */
+/* line 422, ../sass/screen.scss */
 .side--pad {
-  padding-left: 5% !important;
-  padding-right: 5% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
-/* line 408, ../sass/screen.scss */
+/* line 423, ../sass/screen.scss */
 .tall--pad {
-  padding-top: 2rem !important;
-  padding-bottom: 4rem !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
-/* line 409, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
+.bottom--pad {
+  padding-bottom: 1rem !important;
+}
+
+/* line 427, ../sass/screen.scss */
 .flush {
   margin: 0px !important;
   padding: 0px !important;
 }
 
-/* line 410, ../sass/screen.scss */
+/* line 428, ../sass/screen.scss */
 .flush-top {
   margin-top: 0px !important;
 }
 
-/* line 411, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .flush-bottom {
   margin-bottom: 0px !important;
 }
 
-/* line 412, ../sass/screen.scss */
+/* line 430, ../sass/screen.scss */
 .two-third {
   width: 66.666%;
+}
+
+/* line 433, ../sass/screen.scss */
+.push--bottom {
+  margin-bottom: 1rem !important;
+}
+
+/* line 436, ../sass/screen.scss */
+.push--half-bottom {
+  margin-bottom: 0.5rem !important;
+}
+
+/* line 439, ../sass/screen.scss */
+.container--flex,
+.display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* line 444, ../sass/screen.scss */
+.flex-col {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 448, ../sass/screen.scss */
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 452, ../sass/screen.scss */
+  .small--flex-col {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  /* line 458, ../sass/screen.scss */
+  .small--flex-row {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+/* line 464, ../sass/screen.scss */
+.center--flex {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 469, ../sass/screen.scss */
+.center--flex-test {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -o-flex-line-pack: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 476, ../sass/screen.scss */
+.flex-3 {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -o-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+}
+
+/* line 480, ../sass/screen.scss */
+.flex-2 {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  -o-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+}
+
+/* line 484, ../sass/screen.scss */
+.flex-1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+/**
+ * Icons
+ */
+/* line 493, ../sass/screen.scss */
+.product-list {
+  background: red;
+  display: block;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  /* hover and focus state */
+}
+/* line 500, ../sass/screen.scss */
+.product-list i {
+  margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 60em) {
+  /* line 493, ../sass/screen.scss */
+  .product-list {
+    /* Old browser */
+    margin: 2;
+    /* Modern Browser */
+    margin: 0.125rem;
+  }
+}
+/* line 518, ../sass/screen.scss */
+.product-list:hover, .product-list:focus {
+  background: yellow;
+}
+
+/* line 523, ../sass/screen.scss */
+.icon {
+  /* Old browser */
+  height: 18;
+  /* Modern Browser */
+  height: 1.125rem;
+  /* Old browser */
+  width: 18;
+  /* Modern Browser */
+  width: 1.125rem;
+  display: inline-block;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  text-indent: -9999px;
+}
+
+/* line 533, ../sass/screen.scss */
+.icon--big {
+  /* Old browser */
+  height: 48;
+  /* Modern Browser */
+  height: 3rem;
+  /* Old browser */
+  width: 48;
+  /* Modern Browser */
+  width: 3rem;
+}
+
+/* line 538, ../sass/screen.scss */
+.icon-neonbox {
+  background-image: url(icon/neon_box_icon.svg);
+}
+
+/* line 539, ../sass/screen.scss */
+.icon-huruftimbul {
+  background-image: url(icon/huruf_timbul_icon.svg);
+}
+
+/* line 540, ../sass/screen.scss */
+.icon-billboard {
+  background-image: url(icon/billboard_icon.svg);
+}
+
+/* line 541, ../sass/screen.scss */
+.icon-neonsign {
+  background-image: url(icon/neon_sign_icon.svg);
+}
+
+/* line 542, ../sass/screen.scss */
+.icon-banner {
+  background-image: url(icon/banner_icon.svg);
 }

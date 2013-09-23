@@ -9,7 +9,7 @@ MBP.preventZoom();
 function fullHeightHero() {
 
   var fullHeightClass = document.getElementById("hero");
-  var viewportHeight = (window.innerHeight * 0.95) + "px";
+  var viewportHeight = (window.innerHeight * .75) + "px";
 
   fullHeightClass.style.height=viewportHeight;
 }
@@ -23,7 +23,7 @@ function fullHeightContact() {
 }
 
 fullHeightHero();
-fullHeightContact();
+//fullHeightContact();
 
 
 

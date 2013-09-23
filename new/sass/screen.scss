@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -8,6 +9,8 @@
 
 
 $base-font-size: 16;
+$base-spacing-unit: 1.5rem;
+
 
 @import "jagra-fw/mixin";
 @import "jagra-fw/reset";
@@ -19,6 +22,7 @@ $base-font-size: 16;
 @import "jagra-fw/button";
 @import "jagra-fw/position";
 @import "jagra-fw/grid";
+@import "jagra-fw/module";
 @import "jagra-fw/helper";
 
 $orange :#f39c12;
@@ -29,7 +33,7 @@ $orange :#f39c12;
  */
 
 .container {
-	max-width: 1140px;
+	max-width: 900px;
 	width: 90%;
 	margin: 0 auto;
 	margin: 0 auto;
@@ -41,13 +45,21 @@ $orange :#f39c12;
 	}
 }
 
-blockquote {
-	margin: 16px 0;
-	margin: 1rem 0;
-	padding: 16px;
-	padding: 1rem;
-	border-top: 1px solid $orange;
-	border-bottom: 1px solid $orange; 
+.container-expand {
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	margin: 0 auto;
+
+	/* Reset last element margin inside section to 0 */
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+
+	@include bp(bro-bear) {
+		width: 90%;
+	}
 }
 
 
@@ -225,10 +237,7 @@ html.no-js {
  */
 
  
-.main-content {
-  	// for non browser not Support GPU Accelaration
-  z-index: 5;
-}
+
 
 
 #toggleNav {
@@ -244,39 +253,42 @@ html.no-js {
 // Must add another CSS to load bigger Hero Image Background
  #hero {
  	width: 100%!important;
- 	background: url(../img/bg/dpn-bw-s.jpg);
+ 	//background: url(../img/bg/dpn-bw-s.jpg);
  	-webkit-background-size: cover;
  	background-size: cover;
  }
 
-
-/**
- * Extra large Text for Hero Page
- */
- .slogan {
- 	font-family: "Hofler Text", "Droid Serif", georgia, serif;
- 	text-transform: capitalize;
- 	font-style: italic;
- 	font-weight: bold;
- 	font-weight: 900;
- 	color: $orange;
- 	letter-spacing: -1px;
-
- 	@include bp(baby-bear) {
- 		font-size: 32px;
- 		font-size: 2rem;
- 	}
-	@include bp(mama-bear) {
- 		@include pxtorem(font-size, 48);
- 	}
-
- 	@include bp(papa-bear) {
- 		@include pxtorem(font-size, 58);
- 	}
- }
+.hero {
+	position: relative;
+	&:after {
+		content:"";
+		display: block;
+		position: absolute;
+		//left: -10%;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height:100px;
+		//background-color: red;
+		background-image: url("hero-triangle.svg");
+		background-repeat: no-repeat;
+		background-position: bottom center;
+	}
+}
 
 
 
+
+
+
+
+
+
+
+
+html {
+	background:#f5f5f5
+}
 
 
 // BEHAVIOR
@@ -321,9 +333,6 @@ html.no-js {
 
 
 
-
-
-
  /**
  * Typography Helper
  */
@@ -341,8 +350,8 @@ html.no-js {
 /**
  * Background Helper
  */
-.bg--white {background-color:#fcfcfc!important;}
-.bg--orange {background-color:#ffa500!important;}
+.bg--white {background-color:#f5f5f5!important;}
+.bg--orange {background-color: #ffa500!important;}
 .bg--black {background-color:#000!important;}
 
 
@@ -371,7 +380,7 @@ html.no-js {
 	background: url(../img/thumb/office-bw.jpg) top center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
-	//background-attachment: fixed;
+	background-attachment: fixed;
 }
 
 
@@ -382,6 +391,12 @@ html.no-js {
 .bg--orange-8 {background-color:#B5AB90!important;}
 .bg--orange-9 {background-color:#EBE1AE!important;}
 .bg--orange-10 {background-color:#75675C!important;}
+
+.bg--vitaminc {background-color:#ff9900!important;}
+.bg--dark {background-color:#424242!important;}
+.bg--purple {background-color:#540045!important;}
+.bg--sweet {background-color:#c60052!important;}
+.bg--salmon {background-color:#ff714b!important;}
 
  /**plangsign2
  * layout Helper
@@ -404,9 +419,124 @@ html.no-js {
 }
 
 .pad--top-large { padding: .5rem 0};
-.side--pad {padding-left: 5%!important; padding-right: 5%!important}
-.tall--pad {padding-top: 2rem!important; padding-bottom: 4rem!important}
+.side--pad {padding-left: 1rem!important; padding-right: 1rem!important}
+.tall--pad {padding-top: 3rem!important; padding-bottom: 3rem!important}
+.bottom--pad {padding-bottom: 1rem!important}
+
+
 .flush {margin: 0px!important; padding: 0px!important}
 .flush-top {margin-top: 0px!important}
 .flush-bottom {margin-bottom: 0px!important}
 .two-third {width: 66.666%}
+
+
+.push--bottom {margin-bottom: 1rem!important}
+
+
+.push--half-bottom {margin-bottom: .5rem!important}
+
+.container--flex,
+.display-flex {
+	@include display-flex;
+}
+
+
+.flex-col {
+	@include flex-direction(column)
+}
+
+.flex-row {
+	@include flex-direction(row)
+}
+
+.small--flex-col {
+	@include bp(sister-bear) {
+		@include flex-direction(column)
+	}
+}
+
+.small--flex-row {
+	@include bp(sister-bear) {
+		@include flex-direction(row)
+	}
+}
+
+.center--flex {
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+.center--flex-test {
+	@include justify-content(center);
+	@include align-items(center);
+	 @include align-content(center);
+}
+
+
+.flex-3 {
+	@include flex(3);	
+}
+
+.flex-2 {
+	@include flex(2);
+}
+
+.flex-1{
+	@include flex(1);
+}
+
+/**
+ * Icons
+ */
+
+
+ .product-list {
+ 	background:red;
+ 	display: block;
+ 	padding: $base-spacing-unit 0;
+ 	text-decoration: none;
+ 	text-align: center;
+
+ 	i {
+ 		margin-bottom: $base-spacing-unit;
+ 	};
+
+ 	@include bp(mama-bear) {
+ 		@include pxtorem(margin, (24 / 12))
+ 	};
+	
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+
+
+ 	/* hover and focus state */
+
+ 	&:hover,
+ 	&:focus {
+		background:yellow;
+ 	}
+ }
+
+ .icon {
+ 	@include pxtorem(height, 18);
+ 	@include pxtorem(width, 18);
+ 	display: inline-block;
+ 	-webkit-background-size: cover;
+ 	background-size: cover;
+ 	background-position: center center;
+ 	text-indent: -9999px;
+ }
+
+ .icon--big {
+ 	@include pxtorem(height, 48);
+ 	@include pxtorem(width, 48);
+ }
+
+ .icon-neonbox {background-image: url(icon/neon_box_icon.svg);}
+ .icon-huruftimbul {background-image: url(icon/huruf_timbul_icon.svg);}
+ .icon-billboard {background-image: url(icon/billboard_icon.svg);}
+ .icon-neonsign {background-image: url(icon/neon_sign_icon.svg);}
+ .icon-banner {background-image: url(icon/banner_icon.svg);}
