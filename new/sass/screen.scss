@@ -16,7 +16,7 @@ $base-spacing-unit: 1.5rem;
 @import "jagra-fw/reset";
 
 @import "jagra-fw/typo";
-
+@import "jagra-fw/images";
 
 @import "jagra-fw/nav";
 @import "jagra-fw/button";
@@ -221,16 +221,6 @@ html.no-js {
 	     -o-transition: all 0.5s ease; 
 	        transition: all 0.5s ease; 
 }
-
-
-/**
- * Responsive IMages
- */
- .img-r {
- 	width: 100%;
- 	height: auto;
- }
-
 
 /**
  * Main Navigation 
