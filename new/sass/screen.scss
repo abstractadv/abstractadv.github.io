@@ -354,6 +354,9 @@ html {
 .bg--konstruksi {background: url(../img/thumb/konstruksi.jpg) center center no-repeat;}
 .bg--neonbox {background: url(../img/thumb/neonbox.jpg) center center no-repeat;}
 .bg--marka {background: url(../img/thumb/plangsign2.jpg) center center no-repeat;}
+.bg--officeorange {background:url(../img/gallery/office-orange.jpg) center center no-repeat;}
+.bg--officewhite {background:url(../img/gallery/office-white.jpg) center center no-repeat;}
+
 
 .bg--banner,
 .bg--billboard,
@@ -362,7 +365,9 @@ html {
 .bg--konstruksi,
 .bg--marka,
 .bg--neonbox,
-.bg--runningtext {
+.bg--runningtext,
+.bg--officeorange,
+.bg--officewhite {
 	-webkit-background-size: cover;
 	background-size: cover;
 }
