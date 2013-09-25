@@ -33,7 +33,7 @@ $orange :#f39c12;
  */
 
 .container {
-	max-width: 900px;
+	max-width: 35em;
 	width: 90%;
 	margin: 0 auto;
 	margin: 0 auto;
@@ -46,7 +46,7 @@ $orange :#f39c12;
 }
 
 .container-expand {
-	max-width: 900px;
+	max-width: 35em;
 	width: 100%;
 	margin: 0 auto;
 	margin: 0 auto;
@@ -260,7 +260,7 @@ html.no-js {
 		width: 100%;
 		height:100px;
 		//background-color: red;
-		background-image: url("hero-triangle.svg");
+		//background-image: url("hero-triangle.svg");
 		background-repeat: no-repeat;
 		background-position: bottom center;
 	}
@@ -486,7 +486,7 @@ html {
 
 
  .product-list {
- 	background:red;
+ 	background:#ffa500;
  	display: block;
  	padding: $base-spacing-unit 0;
  	text-decoration: none;

@@ -32,6 +32,16 @@
 
 .text--bold {font-weight: 800!important;}
 
+/**
+ * Force text fit in 35em
+ */
+
+.resisted {
+	max-width: 35em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
 
 
 /**

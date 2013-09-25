@@ -1,10 +1,10 @@
 /*
 Syntax error: Undefined variable: "$base-spacing-unit".
-        on line 46 of /Users/indra/Public/github/abstractadv.github.io/new/sass/jagra-fw/_typo.scss
+        on line 51 of /Users/indra/Public/github/abstractadv.github.io/new/sass/jagra-fw/_typo.scss
         from line 15 of /Users/indra/Public/github/abstractadv.github.io/new/sass/screen-2.scss
 
 Backtrace:
-/Users/indra/Public/github/abstractadv.github.io/new/sass/jagra-fw/_typo.scss:46
+/Users/indra/Public/github/abstractadv.github.io/new/sass/jagra-fw/_typo.scss:51
 /Users/indra/Public/github/abstractadv.github.io/new/sass/screen-2.scss:15
 /Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.7/lib/sass/script/variable.rb:49:in `_perform'
 /Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.7/lib/sass/script/node.rb:40:in `perform'
@@ -65,11 +65,12 @@ Backtrace:
 /Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/listener.rb:212:in `call'
 /Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/listener.rb:212:in `on_change'
 /Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/listener.rb:221:in `block in initialize_adapter'
-/Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapters/polling.rb:56:in `call'
-/Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapters/polling.rb:56:in `poll'
-/Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapters/polling.rb:32:in `block in start'
+/Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
+/Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
+/Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
+/Users/indra/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `block in start'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$base-spacing-unit\".\A         on line 46 of /Users/indra/Public/github/abstractadv.github.io/new/sass/jagra-fw/_typo.scss\A         from line 15 of /Users/indra/Public/github/abstractadv.github.io/new/sass/screen-2.scss"; }
+  content: "Syntax error: Undefined variable: \"$base-spacing-unit\".\A         on line 51 of /Users/indra/Public/github/abstractadv.github.io/new/sass/jagra-fw/_typo.scss\A         from line 15 of /Users/indra/Public/github/abstractadv.github.io/new/sass/screen-2.scss"; }

@@ -10,11 +10,16 @@
 		font-size: 120%;
 		line-height: 1.6;
 	}
+
+	@include bp(papa-bear) {
+		font-size: 150%;
+		line-height: 1.6;
+	}
 }
 
 body {
-	//font-family: "Roboto", "Segoe WP", "Segoe UI", "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, Sans-serif;
-	font-family: georgia;
+	font-family: "Roboto", "Segoe WP", "Segoe UI", "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, Sans-serif;
+	font-family: georgia, Serif;
 	font-weight: 300;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
